@@ -6,8 +6,20 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="835dp"
+        android:layout_height="1379dp"
+        android:contentDescription="@string/hello_first_fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black_wallpaper" />
+
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/beginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="244dp"
@@ -26,8 +38,10 @@
         android:layout_marginTop="150dp"
         android:text="@string/country_app"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#F1EEEE"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
