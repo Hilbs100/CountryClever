@@ -12,6 +12,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    Button begin = findViewById(R.id.button2);
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
