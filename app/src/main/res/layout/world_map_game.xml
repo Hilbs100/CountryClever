@@ -12,6 +12,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:clickable="true"
+        android:onClick="sendCanada"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/black_wallpaper" />

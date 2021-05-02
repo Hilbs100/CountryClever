@@ -13,23 +13,22 @@
         android:contentDescription="@string/hello_first_fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419"
+        app:layout_constraintVertical_bias="0.521"
         app:srcCompat="@drawable/black_wallpaper" />
 
     <Button
         android:id="@+id/beginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_width="119dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="44dp"
         android:background="#DC0D0D"
         android:text="Link to Quiz"
         app:backgroundTint="#C81010"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#FFFFFF" />
 
@@ -50,8 +49,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ellipsize="middle"
         android:text="Add description of the game and about the two sections. Maybe make one buttom red and the other blue (like terminator)."
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,16 +60,16 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
         android:layout_marginTop="259dp"
         android:text="Link to Map"
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toEndOf="@+id/beginButton"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.559" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

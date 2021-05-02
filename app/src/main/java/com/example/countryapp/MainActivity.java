@@ -51,4 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void sendCanada(View v) {
+        Log.i("Canada", "Clicked");
+    }
 }
