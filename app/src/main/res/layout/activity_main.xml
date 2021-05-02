@@ -15,7 +15,8 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/content_main" />
+        layout="@layout/content_main"
+        android:layout_width="373dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -33,5 +34,11 @@
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="top|center"
         app:popupTheme="@style/Theme.CountryApp.PopupOverlay" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="244dp"
+        android:layout_height="125dp"
+        android:text="Write description of the game and two sections" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
