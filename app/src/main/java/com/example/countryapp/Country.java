@@ -2,6 +2,7 @@ package com.example.countryapp;
 
 import java.util.*;
 
+
 public class Country {
     //private instance variables
     private int landMass;
@@ -14,8 +15,9 @@ public class Country {
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
-
     private static ArrayList<Country> countryList = new ArrayList<Country>();
+
+
     // Constructor Method
     public Country(int landMass, String funFact1, String countryName, int population,
     String capital, String language) {
@@ -28,6 +30,7 @@ public class Country {
         this.populate();
         countryList.add(this);
     }
+
     // Accessor Methods
     public int getLandMass() {
         return landMass;
@@ -65,6 +68,8 @@ public class Country {
     public MultipleChoice getLanguageMC() {
         return languageMC;
     }
+
+
     // Return index position of country in list
     public static int indexOfCountry(Country country) {
         for (int i = 0; i < countryList.size(); i++) {
@@ -73,6 +78,8 @@ public class Country {
         }
         return -1;
     }
+
+
     // returns true if the two Country objects are the same, false otherwise
     public boolean equals(Country other) {
         if (this.countryName.equals(other.getCountryName()) && this.capital.equals(other.getCapital()))
@@ -80,6 +87,8 @@ public class Country {
         else
             return false;
     }
+
+
     //populates the Multiple Choice Questions
     public void populate() {
         landMassMC = new MultipleChoice("landMass", 4, this);
