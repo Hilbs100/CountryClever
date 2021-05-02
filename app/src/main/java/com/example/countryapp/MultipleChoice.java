@@ -158,8 +158,34 @@ public class MultipleChoice {
      public int findOtherCountries(int main, int a, int b, int c) {
          int rand = (int)(Math.random() * Country.getCountryListSize());
          while (true) {
-             if (rand != a && rand != b && rand != c && rand != main)
-                 return rand;
+             if (rand != a && rand != b && rand != c && rand != main) {
+                 if (type.equals("landMass") && country.getLandMass() != Country.getCountry(rand).getLandMass()
+                         && !(choiceA.equals("" + Country.getCountry(rand).getLandMass())) &&
+                         !(choiceB.equals("" + Country.getCountry(rand).getLandMass())) &&
+                         !(choiceC.equals("" + Country.getCountry(rand).getLandMass())) &&
+                         !(choiceD.equals("" + Country.getCountry(rand).getLandMass()))) {
+                     return rand;
+                 }
+                 else if (type.equals("population") && country.getPopulation() != Country.getCountry(rand).getPopulation()
+                         && !(choiceA.equals("" + Country.getCountry(rand).getPopulation())) &&
+                         !(choiceB.equals("" + Country.getCountry(rand).getPopulation())) &&
+                         !(choiceC.equals("" + Country.getCountry(rand).getPopulation())) &&
+                         !(choiceD.equals("" + Country.getCountry(rand).getPopulation())))
+                     return rand;
+                 else if (type.equals("capital") && !(country.getCapital().equals(Country.getCountry(rand).getCapital()))
+                         && !(choiceA.equals("" + Country.getCountry(rand).getCapital())) &&
+                         !(choiceB.equals("" + Country.getCountry(rand).getCapital())) &&
+                         !(choiceC.equals("" + Country.getCountry(rand).getCapital())) &&
+                         !(choiceD.equals("" + Country.getCountry(rand).getCapital())))
+                     return rand;
+                 else if(type.equals("language") && !(country.getLanguage().equals(Country.getCountry(rand).getLanguage()))
+                         && !(choiceA.equals("" + Country.getCountry(rand).getLanguage())) &&
+                         !(choiceB.equals("" + Country.getCountry(rand).getLanguage())) &&
+                         !(choiceC.equals("" + Country.getCountry(rand).getLanguage())) &&
+                         !(choiceD.equals("" + Country.getCountry(rand).getLanguage())))
+                     return rand;
+             }
+             rand = (int)(Math.random() * Country.getCountryListSize());
          }
      }
      //Accessor Methods

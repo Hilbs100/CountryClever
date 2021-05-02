@@ -10,6 +10,11 @@ public class Country {
     private int population;
     private String capital;
     private String language;
+    private MultipleChoice landMassMC;
+    private MultipleChoice populationMC;
+    private MultipleChoice capitalMC;
+    private MultipleChoice languageMC;
+
     private static ArrayList<Country> countryList = new ArrayList<Country>();
     // Constructor Method
     public Country(int landMass, String funFact1, String countryName, int population,
@@ -20,6 +25,7 @@ public class Country {
         this.population = population;
         this.capital = capital;
         this.language = language;
+        this.populate();
         countryList.add(this);
     }
     // Accessor Methods
@@ -47,6 +53,18 @@ public class Country {
     public static Country getCountry(int index) {
         return countryList.get(index);
     }
+    public MultipleChoice getLandMassMC() {
+        return landMassMC;
+    }
+    public MultipleChoice getPopulationMC() {
+        return populationMC;
+    }
+    public MultipleChoice getCapitalMC() {
+        return capitalMC;
+    }
+    public MultipleChoice getLanguageMC() {
+        return languageMC;
+    }
     // Return index position of country in list
     public static int indexOfCountry(Country country) {
         for (int i = 0; i < countryList.size(); i++) {
@@ -61,5 +79,12 @@ public class Country {
             return true;
         else
             return false;
+    }
+    //populates the Multiple Choice Questions
+    public void populate() {
+        landMassMC = new MultipleChoice("landMass", 4, this);
+        populationMC = new MultipleChoice("population", 4, this);
+        capitalMC = new MultipleChoice("capital", 4, this);
+        languageMC = new MultipleChoice("language", 4, this);
     }
 }
