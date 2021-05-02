@@ -35,10 +35,4 @@
         app:layout_anchorGravity="top|center"
         app:popupTheme="@style/Theme.CountryApp.PopupOverlay" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="244dp"
-        android:layout_height="125dp"
-        android:text="Write description of the game and two sections" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
