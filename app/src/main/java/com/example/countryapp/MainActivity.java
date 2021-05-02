@@ -1,5 +1,6 @@
 package com.example.countryapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -13,7 +14,9 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
 
-    @Override
+    private Button worldMap;
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -28,6 +31,22 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Starter", "clicked");
             }
         });
+
+        //button for world map
+        worldMap = findViewById(R.id.world_map_button);
+        worldMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWorldMap();
+            }
+        });
+
+
+    }
+
+    public void openWorldMap(){
+        Intent intent = new Intent(this, world_Map.class);
+        startActivity(intent);
     }
 
     @Override

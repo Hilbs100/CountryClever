@@ -36,21 +36,19 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
         android:text="@string/country_app"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#F1EEEE"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="150dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ellipsize="middle"
-        android:text="Add description of the game and about the two sections. Maybe make one buttom red and the other blue (like terminator)."
+        android:text="Add description of the game and about the two sections. Maybe make one buttom red and the other blue (like the Matrix)."
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/world_map_button"
         android:layout_width="130dp"
         android:layout_height="65dp"
         android:layout_marginTop="259dp"
