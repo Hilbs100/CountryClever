@@ -50,12 +50,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
         android:text="@string/country_app"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#F1EEEE"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="150dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
