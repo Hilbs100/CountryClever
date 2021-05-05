@@ -85,7 +85,11 @@
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toEndOf="@+id/beginButton"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.559" /><![CDATA[
 
->>>>>>> 90b5b69150d45f026f0283dcd4a4128166c6ab2c
+
+
+    >>>>>>> 90b5b69150d45f026f0283dcd4a4128166c6ab2c
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
