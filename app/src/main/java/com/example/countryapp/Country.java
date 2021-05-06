@@ -1,6 +1,14 @@
 package com.example.countryapp;
 
-import java.util.*;
+import android.util.Log;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 
 public class Country {
@@ -16,6 +24,7 @@ public class Country {
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
     private static ArrayList<Country> countryList = new ArrayList<Country>();
+    private int numCountries;
 
 
     // Constructor Method
@@ -29,6 +38,9 @@ public class Country {
         this.language = language;
         this.populate();
         countryList.add(this);
+    }
+    private Country(Country c) {
+        this(c.landMass, c.funFact1, c.countryName, c.population, c.capital, c.language);
     }
 
     // Accessor Methods
@@ -68,6 +80,9 @@ public class Country {
     public MultipleChoice getLanguageMC() {
         return languageMC;
     }
+    public int getNumCountries() {
+        return numCountries;
+    }
 
 
     // Return index position of country in list
@@ -87,6 +102,10 @@ public class Country {
         else
             return false;
     }
+    //Sets the amount of countries in the Array list so that they can be found during reinitialization
+    public void setNumCountries() {
+        numCountries = getCountryListSize();
+    }
 
 
     //populates the Multiple Choice Questions
@@ -96,4 +115,64 @@ public class Country {
         capitalMC = new MultipleChoice("capital", 4, this);
         languageMC = new MultipleChoice("language", 4, this);
     }
+    // This converts all of the objects into .ser files to be used later
+    public static void saveAll() {
+        String num;
+        for (int i = 0; i < countryList.size(); i++) {
+            countryList.get(i).setNumCountries();
+            num = "" + i;
+            try {
+                FileOutputStream fos = new FileOutputStream("Country" + num + ".ser");
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                oos.writeObject(countryList.get(i));
+                oos.close();
+                fos.close();
+            }
+            catch(IOException ioe) {
+                Log.i("Exception Logger", String.valueOf(ioe));
+
+            }
+        }
+    }
+    //This gets the objects from the .ser files
+    public static void reinstate() {
+        Country c;
+        Country country = null;
+        int numOfCountries;
+        try {
+            FileInputStream fis = new FileInputStream("Country0.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            c = (Country)ois.readObject();
+            country = new Country(c);
+            ois.close();
+            fis.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        numOfCountries = country.numCountries;
+        String num;
+        for (int i = 1; i < numOfCountries; i++) {
+            num = "" + i;
+            try {
+                FileInputStream fis = new FileInputStream("Country" + num + ".ser");
+                ObjectInputStream ois = new ObjectInputStream(fis);
+                c = (Country)ois.readObject();
+                country = new Country(c);
+                ois.close();
+                fis.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
 }
