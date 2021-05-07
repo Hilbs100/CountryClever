@@ -74,4 +74,3 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Canada", "Clicked");
     }
 }
-//testing
