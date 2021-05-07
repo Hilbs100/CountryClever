@@ -106,7 +106,7 @@ public class Country {
     }
 
     //get randCountry no repeats
-    public Country randCountryNoRpts() {
+    public static Country randCountryNoRpts() {
         reset();
         deleteAllNotUsed();
         deleteAllUsed();
