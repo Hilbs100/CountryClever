@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-
+import java.lang.Math;
 
 public class Country {
     //private instance variables
@@ -24,6 +24,7 @@ public class Country {
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
     private static ArrayList<Country> countryList = new ArrayList<Country>();
+    private static ArrayList<Country> usedCountries = new ArrayList<Country>();
     private int numCountries;
 
 
@@ -65,9 +66,7 @@ public class Country {
     public static int getCountryListSize() {
         return countryList.size();
     }
-    public static Country getCountry(int index) {
-        return countryList.get(index);
-    }
+    public static Country getCountry(int index) { return countryList.get(index); }
     public MultipleChoice getLandMassMC() {
         return landMassMC;
     }
@@ -84,6 +83,17 @@ public class Country {
         return numCountries;
     }
 
+    //get randCountry no repeats
+    public Country randCountryNoRpts() {
+        int rand = (int)(Math.random() * getCountryListSize());
+        Country cod = getCountry(rand);
+        if (indexOfUsedCountry(cod) < 0) {
+            
+            return cod;
+        }
+
+    }
+
 
     // Return index position of country in list
     public static int indexOfCountry(Country country) {
@@ -94,6 +104,14 @@ public class Country {
         return -1;
     }
 
+    //returns index position of country in usedCountries
+    public static int indexOfUsedCountry(Country c) {
+        for (int i = 0; i < usedCountries.size(); i++) {
+            if (country.equals(usedCountries.get(i)))
+                return i;
+        }
+        return -1;
+    }
 
     // returns true if the two Country objects are the same, false otherwise
     public boolean equals(Country other) {
