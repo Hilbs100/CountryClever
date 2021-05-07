@@ -16,10 +16,10 @@
     <include
         android:id="@+id/include"
         layout="@layout/content_main"
-        android:layout_width="373dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center"
-        android:layout_height="370dp" />
+        app:layout_anchorGravity="center" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
