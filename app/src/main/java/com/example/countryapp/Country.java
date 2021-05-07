@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
+import java.util.*;
 import java.lang.Math;
 
 public class Country {
@@ -23,7 +23,9 @@ public class Country {
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
+    private boolean used;
     private static ArrayList<Country> countryList = new ArrayList<Country>();
+    private static ArrayList<Country> nonUsedCountries = new ArrayList<Country>();
     private static ArrayList<Country> usedCountries = new ArrayList<Country>();
     private int numCountries;
 
@@ -37,6 +39,7 @@ public class Country {
         this.population = population;
         this.capital = capital;
         this.language = language;
+        used = false;
         this.populate();
         countryList.add(this);
     }
@@ -82,17 +85,42 @@ public class Country {
     public int getNumCountries() {
         return numCountries;
     }
+    private static void deleteAllNotUsed() {
+        while (nonUsedCountries.size() > 0) {
+            nonUsedCountries.remove(0);
+        }
+    }
+    private static void deleteAllUsed() {
+        while (usedCountries.size() > 0) {
+            usedCountries.remove(0);
+        }
+    }
+    public static void reset() {
+        for (int i = 0; i < countryList.size(); i++) {
+            if (!countryList.get(i).used)
+                return;
+        }
+        for (int i = 0; i < countryList.size(); i++) {
+            countryList.get(i).used = false;
+        }
+    }
 
     //get randCountry no repeats
     public Country randCountryNoRpts() {
-        int rand = (int)(Math.random() * getCountryListSize());
-        Country cod = getCountry(rand);
-        if (indexOfUsedCountry(cod) < 0) {
-            usedCountries.add(cod);
-            return cod;
+        reset();
+        deleteAllNotUsed();
+        deleteAllUsed();
+        for (int i = 0; i < countryList.size(); i++) {
+            if (countryList.get(i).used) {
+                usedCountries.add(countryList.get(i));
+            }
+            else
+                nonUsedCountries.add(countryList.get(i));
         }
-        return randCountryNoRpts();
-
+        int rand = (int)(Math.random() * nonUsedCountries.size());
+        Country cod = nonUsedCountries.get(rand);
+        cod.used = true;
+        return cod;
     }
 
 
