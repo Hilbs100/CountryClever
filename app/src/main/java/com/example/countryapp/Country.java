@@ -88,9 +88,10 @@ public class Country {
         int rand = (int)(Math.random() * getCountryListSize());
         Country cod = getCountry(rand);
         if (indexOfUsedCountry(cod) < 0) {
-            
+            usedCountries.add(cod);
             return cod;
         }
+        return randCountryNoRpts();
 
     }
 
@@ -107,7 +108,7 @@ public class Country {
     //returns index position of country in usedCountries
     public static int indexOfUsedCountry(Country c) {
         for (int i = 0; i < usedCountries.size(); i++) {
-            if (country.equals(usedCountries.get(i)))
+            if (c.equals(usedCountries.get(i)))
                 return i;
         }
         return -1;
