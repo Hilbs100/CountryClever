@@ -2,6 +2,9 @@ package com.example.countryapp;
 
 public class countryMaker {
     public static void main (String[] args){
+        //Someone might wanna look over these and add the
+        //maybe countries (like Taiwan)
+
         //Europe Countries added
         {
             GeographyGame Europe = new GeographyGame();
@@ -141,22 +144,90 @@ public class countryMaker {
         //Asian Counties added
         {
             GeographyGame Asia = new GeographyGame();
-            Asia.addCountry("");
+            Asia.addCountry("China");
+            Asia.addCountry("India");
+            Asia.addCountry("Indonesia");
+            Asia.addCountry("Pakistan");
+            Asia.addCountry("Bangladesh");
+            Asia.addCountry("Japan");
+            Asia.addCountry("Philippines");
+            Asia.addCountry("Vietnam");
+            Asia.addCountry("Turkey");
+            Asia.addCountry("Iran");
+            Asia.addCountry("Thailand");
+            Asia.addCountry("Myanmar");
+            Asia.addCountry("South Korea");
+            Asia.addCountry("Iraq");
+            Asia.addCountry("Afghanistan");
+            Asia.addCountry("Saudi Arabia");
+            Asia.addCountry("Uzbekistan");
+            Asia.addCountry("Malaysia");
+            Asia.addCountry("Yemen");
+            Asia.addCountry("Nepal");
+            Asia.addCountry("North Korea");
+            Asia.addCountry("Sri Lanka");
+            Asia.addCountry("Kazakhstan");
+            Asia.addCountry("Syria");
+            Asia.addCountry("Cambodia");
+            Asia.addCountry("Azerbaijan");
+            Asia.addCountry("United Arab Emirates");
+            Asia.addCountry("Tajikistan");
+            Asia.addCountry("Israel");
+            Asia.addCountry("Laos");
+            Asia.addCountry("Lebanon");
+            Asia.addCountry("Kyrgyzstan");
+            Asia.addCountry("Turkmenistan");
+            Asia.addCountry("Singapore");
+            Asia.addCountry("Oman");
+            Asia.addCountry("State of Palestine");
+            Asia.addCountry("Kuwait");
+            Asia.addCountry("Georgia");
+            Asia.addCountry("Mongolia");
+            Asia.addCountry("Armenia");
+            Asia.addCountry("Qatar");
+            Asia.addCountry("Bahrain");
+            Asia.addCountry("Timor-Leste");
+            Asia.addCountry("Cyprus");
+            Asia.addCountry("Bhutan");
+            Asia.addCountry("Maldives");
+            Asia.addCountry("Brunei");
         }
 
         //South American added
         {
-
+            GeographyGame southAmerica = new GeographyGame();
+            southAmerica.addCountry("Argentina");
+            southAmerica.addCountry("Bolivia");
+            southAmerica.addCountry("Brazil");
+            southAmerica.addCountry("Chile");
+            southAmerica.addCountry("Colombia");
+            southAmerica.addCountry("Ecuador");
+            southAmerica.addCountry("Guyana");
+            southAmerica.addCountry("Paraguay");
+            southAmerica.addCountry("Peru");
+            southAmerica.addCountry("Suriname");
+            southAmerica.addCountry("Uruguay");
+            southAmerica.addCountry("Venezuela");
         }
 
         //Oceania added
         {
-
-        }
-
-        //Antarctica added
-        {
-
+            GeographyGame Oceania = new GeographyGame();
+            Oceania.addCountry("Australia");
+            Oceania.addCountry("Papua New Guinea");
+            Oceania.addCountry("New Zealand");
+            Oceania.addCountry("Fiji");
+            Oceania.addCountry("Solomon Islands");
+            Oceania.addCountry("Vanuatu");
+            Oceania.addCountry("New Caledonia");
+            Oceania.addCountry("Kiribati");
+            Oceania.addCountry("Samoa");
+            Oceania.addCountry("Micronesia");
+            Oceania.addCountry("Tonga");
+            Oceania.addCountry("Marshall Islands");
+            Oceania.addCountry("Palau");
+            Oceania.addCountry("Tuvalu");
+            Oceania.addCountry("Nauru");
         }
     }
 }
