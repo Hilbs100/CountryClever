@@ -1,12 +1,13 @@
 package com.example.countryapp;
 
 public class countryMaker {
-    public static void main (String[] args){
+    public void runThings(){
         //Someone might wanna look over these and add the
         //maybe countries (like Taiwan)
 
         //Europe Countries added
         {
+
             GeographyGame Europe = new GeographyGame();
             Europe.addCountry("Russia");
             Europe.addCountry("Germany");
@@ -51,11 +52,14 @@ public class countryMaker {
             Europe.addCountry("Monaco");
             Europe.addCountry("Liechtenstein");
             Europe.addCountry("San Marino");
-            Europe.addCountry("Holy See");
+            Europe.addCountry("The Vatican City");
+            Europe.setUnusedCountries();
         }
+
 
         //North American Countries added
         {
+
             GeographyGame northAmerica = new GeographyGame();
             northAmerica.addCountry("Canada");
             northAmerica.addCountry("United States of America");
@@ -80,7 +84,9 @@ public class countryMaker {
             northAmerica.addCountry("Saint Lucia");
             northAmerica.addCountry("Saint Vincent and the Grenadines");
             northAmerica.addCountry("Trinidad and Tobago");
+            northAmerica.setUnusedCountries();
         }
+
 
         //African Countries added
         {
@@ -139,10 +145,13 @@ public class countryMaker {
             Africa.addCountry("Cabo Verde");
             Africa.addCountry("Sao Tome & Principe");
             Africa.addCountry("Seychelles");
+            Africa.setUnusedCountries();
         }
+
 
         //Asian Counties added
         {
+
             GeographyGame Asia = new GeographyGame();
             Asia.addCountry("China");
             Asia.addCountry("India");
@@ -191,7 +200,9 @@ public class countryMaker {
             Asia.addCountry("Bhutan");
             Asia.addCountry("Maldives");
             Asia.addCountry("Brunei");
+            Asia.setUnusedCountries();
         }
+
 
         //South American added
         {
@@ -208,7 +219,9 @@ public class countryMaker {
             southAmerica.addCountry("Suriname");
             southAmerica.addCountry("Uruguay");
             southAmerica.addCountry("Venezuela");
+            southAmerica.setUnusedCountries();
         }
+
 
         //Oceania added
         {
@@ -228,6 +241,8 @@ public class countryMaker {
             Oceania.addCountry("Palau");
             Oceania.addCountry("Tuvalu");
             Oceania.addCountry("Nauru");
+            Oceania.setUnusedCountries();
         }
+
     }
 }
