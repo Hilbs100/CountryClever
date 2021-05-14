@@ -107,7 +107,7 @@ public class Country {
     }
 
     //get randCountry no repeats
-    public static void setCountryOftheDay() {
+    public static void setCountryOfTheDay() {
         reset();
         deleteAllNotUsed();
         deleteAllUsed();
