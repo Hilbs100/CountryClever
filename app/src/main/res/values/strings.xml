@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="country_app">Country App</string>
     <string name="start">Start</string>
+    <string name="this_is_where_the_randomly_generated_country_s_name_will_be_maybe_add_a_few_facts_here_as_hints">This is where the randomly generated country\'s name will be. Maybe add a few facts here as hints.</string>
 </resources>
