@@ -7,10 +7,13 @@ public class CountryOfDay extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_Country_Of_Day);
+        setContentView(R.layout.activity_country_of_day);
     }
+    /*
     private Country countryOfDay;
     public CountryOfDay() {
 
     }
+
+     */
 }
