@@ -33,7 +33,7 @@
         app:rippleColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/country_of_day_button"
         android:layout_width="130dp"
         android:layout_height="65dp"
         android:layout_marginTop="259dp"
