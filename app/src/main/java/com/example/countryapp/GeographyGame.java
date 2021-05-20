@@ -1,5 +1,7 @@
 package com.example.countryapp;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class GeographyGame {
@@ -27,9 +29,11 @@ public class GeographyGame {
     public boolean pick(String country) {
         if (country.equals(goalCountry)) {
             findNewCountry();
+            Log.i("Geography Game", "true");
             return true;
         }
         findNewCountry();
+        Log.i("Geography Game", "false");
         return false;
 
     }
