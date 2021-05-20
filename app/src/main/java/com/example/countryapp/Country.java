@@ -13,12 +13,12 @@ import java.lang.Math;
 
 public class Country {
     //private instance variables
-    private int landMass;
-    private String funFact1;
-    private String countryName;
-    private int population;
-    private String capital;
-    private String language;
+    private final int landMass;
+    private final String funFact1;
+    private final String countryName;
+    private final int population;
+    private final String capital;
+    private final String language;
     private MultipleChoice landMassMC;
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
