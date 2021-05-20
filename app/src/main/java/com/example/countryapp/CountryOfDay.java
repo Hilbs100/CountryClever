@@ -20,13 +20,14 @@ public class CountryOfDay extends AppCompatActivity {
     //somebody please add some code that make the back button in the xml file actually go back
     //thx
 
-    private static Country countryOfDay;
+    
     public CountryOfDay() {
         //this will need to be changed so that it updates every day, keeping track of the day using Time.java
-        countryOfDay = Country.randCountryNoRpts();
+        Country.setCountryOfTheDay();
     }
-    public String getHeader() {return countryOfDay.getCountryName();}
+    public String getHeader() {return Country.getCountryOfTheDay().getCountryName();}
     public String getBody() {
+        Country countryOfDay = Country.getCountryOfTheDay();
         String body = "";
         body += "Capital: ";
         body += countryOfDay.getCapital();

@@ -24,7 +24,7 @@ public class Country {
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
     private boolean used;
-    public static Country countryOftheDay;
+    public static Country countryOfTheDay;
     private static ArrayList<Country> countryList = new ArrayList<Country>();
     private static ArrayList<Country> nonUsedCountries = new ArrayList<Country>();
     private static ArrayList<Country> usedCountries = new ArrayList<Country>();
@@ -83,6 +83,7 @@ public class Country {
     public MultipleChoice getLanguageMC() {
         return languageMC;
     }
+    public static Country getCountryOfTheDay()  {return countryOfTheDay; }
     public int getNumCountries() {
         return numCountries;
     }
@@ -120,7 +121,7 @@ public class Country {
         }
         int rand = (int)(Math.random() * nonUsedCountries.size());
         Country cod = nonUsedCountries.get(rand);
-        countryOftheDay = new Country(cod);
+        countryOfTheDay = new Country(cod);
         countryList.remove(countryList.size() - 1);
         cod.used = true;
     }
