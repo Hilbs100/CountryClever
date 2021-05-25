@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--perhaps add some fragment stuff to streamline country of day running?-->
+
     <Button
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
@@ -20,7 +22,7 @@
         android:id="@+id/body"
         android:layout_width="406dp"
         android:layout_height="512dp"
-        android:text="TextView"
+        android:text="@string/country_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header" />
@@ -29,7 +31,7 @@
         android:id="@+id/header"
         android:layout_width="411dp"
         android:layout_height="147dp"
-        android:text="TextView"
+        android:text="@string/country_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

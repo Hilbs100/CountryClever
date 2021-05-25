@@ -25,9 +25,9 @@ public class Country {
     private MultipleChoice languageMC;
     private boolean used;
     public static Country countryOfTheDay;
-    private static ArrayList<Country> countryList = new ArrayList<Country>();
-    private static ArrayList<Country> nonUsedCountries = new ArrayList<Country>();
-    private static ArrayList<Country> usedCountries = new ArrayList<Country>();
+    private static final ArrayList<Country> countryList = new ArrayList<>();
+    private static final ArrayList<Country> nonUsedCountries = new ArrayList<>();
+    private static final ArrayList<Country> usedCountries = new ArrayList<>();
     private int numCountries;
 
 
@@ -147,10 +147,7 @@ public class Country {
 
     // returns true if the two Country objects are the same, false otherwise
     public boolean equals(Country other) {
-        if (this.countryName.equals(other.getCountryName()) && this.capital.equals(other.getCapital()))
-            return true;
-        else
-            return false;
+        return this.countryName.equals(other.getCountryName()) && this.capital.equals(other.getCapital());
     }
     //Sets the amount of countries in the Array list so that they can be found during reinitialization
     public void setNumCountries() {
