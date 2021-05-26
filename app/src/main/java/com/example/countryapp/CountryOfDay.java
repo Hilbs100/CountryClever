@@ -3,6 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Button;
 //import the time thingy here
 
 public class CountryOfDay extends AppCompatActivity {
