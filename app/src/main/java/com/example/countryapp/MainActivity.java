@@ -293,14 +293,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        countryOfDay = findViewById(R.id.country_of_day_button);
-        countryOfDay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                openCountryOfDay();
-            }
-        });
+
     }
     //opens world map when clicked
     public void openWorldMap(){
@@ -308,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openCountryOfDay(){
+    public void openCountryOfDay(View v){
         Intent intent = new Intent(this, CountryOfDay.class);
         startActivity(intent);
     }
