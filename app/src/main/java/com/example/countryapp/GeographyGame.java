@@ -21,9 +21,13 @@ public class GeographyGame {
             unusedCountries.add(countries.get(i));
         }
     }
+    public void start() {
+        findNewCountry();
+    }
     public void findNewCountry() {
         int rand = (int)(Math.random() * unusedCountries.size());
         goalCountry = unusedCountries.get(rand);
+        Log.i("Country Selected", goalCountry);
         usedCountries.add(unusedCountries.remove(rand));
     }
     public boolean pick(String country) {
