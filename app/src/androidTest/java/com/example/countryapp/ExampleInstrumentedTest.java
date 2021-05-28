@@ -1,4 +1,4 @@
-package com.example.countryapp;
+xpackage com.example.countryapp;
 
 import android.content.Context;
 
