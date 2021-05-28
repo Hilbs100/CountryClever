@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button worldMap;
-    private Button countryOfDay;
     // Constructors and other things
     {
 
@@ -280,14 +279,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //button for world map
-        worldMap = findViewById(R.id.world_map_button);
-        worldMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openWorldMap();
-            }
-        });
-
 
     }
     //opens world map when clicked
