@@ -14,4 +14,5 @@
     <string name="this_is_where_the_randomly_generated_country_s_name_will_be_maybe_add_a_few_facts_here_as_hints">This is where the randomly generated country\'s name will be. Maybe add a few facts here as hints.</string>
     <string name="country_description">Country Description</string>
     <string name="country_name">Country Name</string>
+    <string name="country_of_the_day">Country of the Day</string>
 </resources>

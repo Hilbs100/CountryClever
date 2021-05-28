@@ -1,10 +1,14 @@
 package com.example.countryapp;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Button;
+import android.view.*;
 //import the time thingy here
+
+
 
 public class CountryOfDay extends AppCompatActivity {
     @Override
@@ -19,10 +23,12 @@ public class CountryOfDay extends AppCompatActivity {
         String bodyText = cod.getBody();
         body.setText(bodyText);
     }
-    //somebody please add some code that make the back button in the xml file actually go back
-    //thx
 
-    
+    public void goBack(View v)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
     public CountryOfDay() {
         //this will need to be changed so that it updates every day, keeping track of the day using Time.java
         Country.setCountryOfTheDay();
