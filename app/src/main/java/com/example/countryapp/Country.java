@@ -70,7 +70,12 @@ public class Country {
     public static int getCountryListSize() {
         return countryList.size();
     }
-    public static Country getCountry(int index) { return countryList.get(index); }
+    public static Country getCountry(int index) {
+        if (index >= 0 && index < countryList.size())
+            return countryList.get(index);
+        else
+            return null;
+    }
     public MultipleChoice getLandMassMC() {
         return landMassMC;
     }
@@ -125,6 +130,13 @@ public class Country {
         countryList.remove(countryList.size() - 1);
         cod.used = true;
     }
+    public static int findCountry(String fName) {
+        for (int i = 0; i < countryList.size(); i++) {
+            if (countryList.get(i).getCountryName().equalsIgnoreCase(fName) )
+                return i;
+        }
+        return 0;
+    }
 
 
     // Return index position of country in list
@@ -133,7 +145,7 @@ public class Country {
             if (country.equals(countryList.get(i)))
                 return i;
         }
-        return -1;
+        return 0;
     }
 
     //returns index position of country in usedCountries
@@ -142,7 +154,7 @@ public class Country {
             if (c.equals(usedCountries.get(i)))
                 return i;
         }
-        return -1;
+        return 0;
     }
 
     // returns true if the two Country objects are the same, false otherwise
