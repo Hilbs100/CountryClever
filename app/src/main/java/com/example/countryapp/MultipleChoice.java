@@ -156,7 +156,7 @@ public class MultipleChoice {
      }
      //finds a country of which that value has not been used; refer to createChoices
      public int findOtherCountries(int main, int a, int b, int c) {
-         int rand = (int)(Math.random() * Country.getCountryListSize());
+         int rand = (int)(Math.random() * (Country.getCountryListSize()-1)) + 1;
          while (true) {
              if (rand != a && rand != b && rand != c && rand != main) {
                  if (type.equals("landMass") && country.getLandMass() != Country.getCountry(rand).getLandMass()
@@ -185,7 +185,7 @@ public class MultipleChoice {
                          !(choiceD.equals("" + Country.getCountry(rand).getLanguage())))
                      return rand;
              }
-             rand = (int)(Math.random() * Country.getCountryListSize());
+             rand = (int)(Math.random() * (Country.getCountryListSize() - 1)) + 1;
          }
      }
      //Accessor Methods
