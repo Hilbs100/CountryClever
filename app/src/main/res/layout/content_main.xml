@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:ignore="ExtraText">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -42,11 +43,11 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="48dp"
-        android:onClick="openCountryOfDay"
         android:text="@string/country_of_the_day"
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+    <!--removed the onClick attribute because it was causing errors -->
 
     <TextView
         android:id="@+id/textView"

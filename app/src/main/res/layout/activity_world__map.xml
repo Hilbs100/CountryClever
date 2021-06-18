@@ -36,13 +36,15 @@
         android:layout_marginBottom="22dp"
         android:text="Back to home screen"
         android:clickable="true"
+        android:onClick="goBack"
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toEndOf="@+id/beginButton"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.559"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/button2"

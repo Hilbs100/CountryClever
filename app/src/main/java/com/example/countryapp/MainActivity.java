@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian");
+        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish, English");
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button cod = (Button) findViewById(R.id.country_of_day_button);
+        cod.setOnClickListener(v -> setContentView(R.layout.activity_country_of_day));
         //button for world map
 
     }
@@ -43,10 +47,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openCountryOfDay(View v){
+    //commenting this out because it is causing an illegal state exception error
+    /*public void openCountryOfDay(View v){
         Intent intent = new Intent(this, CountryOfDay.class);
         startActivity(intent);
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,5 +77,10 @@ public class MainActivity extends AppCompatActivity {
     public void sendCanada(View v) {
         GeographyGame.getMap(1).pick("Canada");
         Log.i("Canada", "Clicked");
+    }
+
+    public void goBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -40,8 +40,8 @@ public class Country {
         this.population = population;
         this.capital = capital;
         this.language = language;
-        used = false;
-        this.populate();
+        this.used = false;
+        //this.populate();
         countryList.add(this);
     }
     private Country(Country c) {
@@ -113,7 +113,7 @@ public class Country {
     }
 
     //get randCountry no repeats
-    public static void setCountryOfTheDay() {
+    public static Country setCountryOfTheDay() {
         reset();
         deleteAllNotUsed();
         deleteAllUsed();
@@ -129,7 +129,30 @@ public class Country {
         countryOfTheDay = new Country(cod);
         countryList.remove(countryList.size() - 1);
         cod.used = true;
+        return cod;
     }
+
+    public String getCodHeader() {
+        return getCountryOfTheDay().getCountryName();
+    }
+
+    public String getCodBody() {
+        //original that is being commented out for testing
+        //Country countryOfDay = Country.getCountryOfTheDay();
+        String body = "";
+        body += "Capital: ";
+        body += getCapital();
+        body += "\nPopulation: ";
+        body += this.getPopulation();
+        body += "\nLandmass: ";
+        body += this.getLandMass();
+        body += "\nLanguage: ";
+        body += this.getLanguage();
+        body += "\nFun Fact: ";
+        body += this.getFunFact1();
+        return body;
+    }
+
     public static int findCountry(String fName) {
         for (int i = 0; i < countryList.size(); i++) {
             if (countryList.get(i).getCountryName().equalsIgnoreCase(fName) )
