@@ -26,11 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        DoTheStuff.run();
+
         Button begin = (Button) findViewById(R.id.beginButton);
         begin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_world__map);
+                setContentView(R.layout.activity_world__map );
                 Log.i("Starter", "clicked");
             }
         });
