@@ -14,15 +14,8 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button worldMap;
-
-
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian");
-        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish, English");
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -85,4 +78,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+
 }

@@ -2,7 +2,7 @@ package com.example.countryapp;
 
 public class DoTheStuff {
     public static void run() {
-        /*Country cLand = new Country(0, "none", "none", 0, "none", "none");
+        Country cLand = new Country(0, "none", "none", 0, "none", "none");
         GeographyGame Europe = new GeographyGame();
         Europe.addCountry("Russia");
         Europe.addCountry("Germany");
@@ -237,7 +237,11 @@ public class DoTheStuff {
         oceania.addCountry("Tuvalu");
         oceania.addCountry("Nauru");
         oceania.setUnusedCountries();
-        GeographyGame.addMap(oceania);*/
+        GeographyGame.addMap(oceania);
+
+        //Countries
+        Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian");
+        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish, English");
 
 
     }
