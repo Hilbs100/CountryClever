@@ -1,5 +1,6 @@
 package com.example.countryapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import static com.example.countryapp.R.id.africa;
+import static com.example.countryapp.R.id.asia;
+import static com.example.countryapp.R.id.europe;
+import static com.example.countryapp.R.id.north_america;
+import static com.example.countryapp.R.id.south_america;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,6 +83,35 @@ public class MainActivity extends AppCompatActivity {
 
     public void goBack(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    @SuppressLint("ResourceType")
+    public void goToNA(View v) {
+        setContentView(north_america);
+    }
+    @SuppressLint("ResourceType")
+    public void goToSA(View v) {
+        setContentView(south_america);
+    }
+    @SuppressLint("ResourceType")
+    public void goToOceania(View v) {
+        setContentView(R.id.oceania);
+    }
+    @SuppressLint("ResourceType")
+    public void goToAsia(View v) {
+        setContentView(asia);
+    }
+    @SuppressLint("ResourceType")
+    public void goToAfrica(View v) {
+        setContentView(africa);
+    }
+    @SuppressLint("ResourceType")
+    public void goToEurope(View v) {
+        setContentView(europe);
+    }
+    @SuppressLint("ResourceType")
+    public void goToWorld(View v) {
+        Intent intent = new Intent(this, WorldMapGame.class);
         startActivity(intent);
     }
 

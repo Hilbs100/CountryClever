@@ -2,7 +2,7 @@ package com.example.countryapp;
 
 public class DoTheStuff {
     public static void run() {
-        Country cLand = new Country(0, "none", "none", 0, "none", "none");
+        Country cLand = new Country(0, "none", "none", 0, "none", "none", "none");
         GeographyGame Europe = new GeographyGame();
         Europe.addCountry("Russia");
         Europe.addCountry("Germany");
@@ -240,8 +240,10 @@ public class DoTheStuff {
         GeographyGame.addMap(oceania);
 
         //Countries
-        Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian");
-        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish, English");
+        Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian", "Located in the northern hemisphere, it is possibly one of the " +
+                "coldest places on earth.");
+        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish, English",
+                "Ireland is a small island off of Britain, and it is located in the Northern Hemisphere. It is also well known for its castles and its beautiful scenery");
 
 
     }

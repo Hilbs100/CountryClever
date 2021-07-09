@@ -8,8 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.*;
-import java.lang.Math;
+import java.util.ArrayList;
 
 public class Country {
     //private instance variables
@@ -19,6 +18,7 @@ public class Country {
     private final int population;
     private final String capital;
     private final String language;
+    private final String description;
     private MultipleChoice landMassMC;
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
@@ -33,19 +33,20 @@ public class Country {
 
     // Constructor Method
     public Country(int landMass, String funFact1, String countryName, int population,
-    String capital, String language) {
+    String capital, String language, String description) {
         this.landMass = landMass;
         this.funFact1 = funFact1;
         this.countryName = countryName;
         this.population = population;
         this.capital = capital;
         this.language = language;
+        this.description = description;
         this.used = false;
         //this.populate();
         countryList.add(this);
     }
     private Country(Country c) {
-        this(c.landMass, c.funFact1, c.countryName, c.population, c.capital, c.language);
+        this(c.landMass, c.funFact1, c.countryName, c.population, c.capital, c.language, c.description);
     }
 
     // Accessor Methods

@@ -25,7 +25,8 @@
         android:onClick="goToOceania"
         android:text="Oceania"
         android:textSize="18sp"
-        app:backgroundTint="#33F3D6" />
+        app:backgroundTint="#33F3D6"
+        tools:ignore="OnClick"/>
 
     <Button
         android:id="@+id/world"
@@ -44,7 +45,8 @@
         android:onClick="goToWorld"
         android:text="World Map"
         android:textSize="18sp"
-        app:backgroundTint="#FF5722" />
+        app:backgroundTint="#FF5722"
+        tools:ignore="OnClick"/>
 
     <Button
         android:id="@+id/europe"
@@ -63,7 +65,8 @@
         android:onClick="goToEurope"
         android:text="Europe"
         android:textSize="18sp"
-        app:backgroundTint="#9C27B0" />
+        app:backgroundTint="#9C27B0"
+        tools:ignore="OnClick"/>
 
     <Button
         android:id="@+id/africa"
@@ -82,7 +85,8 @@
         android:onClick="goToAfrica"
         android:text="Africa"
         android:textSize="18sp"
-        app:backgroundTint="#8BC34A" />
+        app:backgroundTint="#8BC34A"
+        tools:ignore="OnClick"/>
 
     <Button
         android:id="@+id/asia"
@@ -101,7 +105,8 @@
         android:onClick="goToAsia"
         android:text="Asia"
         android:textSize="18sp"
-        app:backgroundTint="#FFEB3B" />
+        app:backgroundTint="#FFEB3B"
+        tools:ignore="OnClick"/>
 
     <Button
         android:id="@+id/sAmerica"
@@ -120,7 +125,8 @@
         android:onClick="goToSA"
         android:text="South America"
         android:textSize="18sp"
-        app:backgroundTint="#DC2222" />
+        app:backgroundTint="#DC2222"
+        tools:ignore="OnClick"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -135,7 +141,8 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick"/>
 
     <Button
         android:id="@+id/backToHome"
@@ -181,6 +188,7 @@
         android:clickable="true"
         android:onClick="goToNA"
         android:text="North America"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        tools:ignore="OnClick"/>
 
 </RelativeLayout>
