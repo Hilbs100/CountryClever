@@ -12,14 +12,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import static com.example.countryapp.R.id.africa;
-import static com.example.countryapp.R.id.asia;
-import static com.example.countryapp.R.id.europe;
-import static com.example.countryapp.R.id.north_america;
-import static com.example.countryapp.R.id.oceania;
-import static com.example.countryapp.R.id.south_america;
-import static com.example.countryapp.R.id.world_map_game;
-
 public class MainActivity extends AppCompatActivity {
 
 
