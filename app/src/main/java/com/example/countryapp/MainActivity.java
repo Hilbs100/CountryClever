@@ -12,9 +12,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,22 +24,32 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DoTheStuff.run();
 
+        Button cod = (Button) findViewById(R.id.country_of_day_button);
+        cod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int year = new Date().getYear() + 1900;
+                int month = new Date().getMonth();
+                int day = new Date().getDay();
+                Country.setDate(year, month, day);
+                Log.i("COD", "Date" + month + "/" + day + "/" + year);
+                setContentView(R.layout.activity_country_of_day);
+            }
+        });
+
         Button begin = (Button) findViewById(R.id.beginButton);
         begin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String currentDate = new SimpleDateFormat("MM-dd-yyyy", Locale.getDefault()).format(new Date());
-                Log.d("TIME TEST", currentDate);
-                setContentView(R.layout.activity_world__map );
+                setContentView(R.layout.activity_world__map);
                 Log.i("Starter", "clicked");
             }
         });
-
-        Button cod = (Button) findViewById(R.id.country_of_day_button);
-        cod.setOnClickListener(v -> setContentView(R.layout.activity_country_of_day));
-        //button for world map
-
     }
+
+
+
+        //button for world map
     //opens world map when clicked
     public void openWorldMap(){
         Intent intent = new Intent(this, world_Map.class);

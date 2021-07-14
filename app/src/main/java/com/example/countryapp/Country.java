@@ -19,6 +19,9 @@ public class Country {
     private final String capital;
     private final String language;
     private final String description;
+    private static int cYear;
+    private static int cMonth;
+    private static int cDay;
     private MultipleChoice landMassMC;
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
@@ -47,6 +50,11 @@ public class Country {
     }
     private Country(Country c) {
         this(c.landMass, c.funFact1, c.countryName, c.population, c.capital, c.language, c.description);
+    }
+    public static void setDate(int year, int month, int day) {
+        cYear = year;
+        cMonth = month;
+        cDay = day;
     }
 
     // Accessor Methods
