@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+    // BUTTONSSSSSS
     public void sendCanada(View v) {
         GeographyGame.getMap(1).pick("Canada");
         Log.i("Canada", "Clicked");
