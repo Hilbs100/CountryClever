@@ -16,7 +16,9 @@ import static com.example.countryapp.R.id.africa;
 import static com.example.countryapp.R.id.asia;
 import static com.example.countryapp.R.id.europe;
 import static com.example.countryapp.R.id.north_america;
+import static com.example.countryapp.R.id.oceania;
 import static com.example.countryapp.R.id.south_america;
+import static com.example.countryapp.R.id.world_map_game;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,32 +89,31 @@ public class MainActivity extends AppCompatActivity {
     }
     @SuppressLint("ResourceType")
     public void goToNA(View v) {
-        setContentView(north_america);
+        setContentView(R.layout.north_america);
     }
     @SuppressLint("ResourceType")
     public void goToSA(View v) {
-        setContentView(south_america);
+        setContentView(R.layout.south_america);
     }
     @SuppressLint("ResourceType")
     public void goToOceania(View v) {
-        setContentView(R.id.oceania);
+        setContentView(R.layout.oceania);
     }
     @SuppressLint("ResourceType")
     public void goToAsia(View v) {
-        setContentView(asia);
+        setContentView(R.layout.asia);
     }
     @SuppressLint("ResourceType")
     public void goToAfrica(View v) {
-        setContentView(africa);
+        setContentView(R.layout.africa);
     }
     @SuppressLint("ResourceType")
     public void goToEurope(View v) {
-        setContentView(europe);
+        setContentView(R.layout.europe);
     }
-    @SuppressLint("ResourceType")
     public void goToWorld(View v) {
-        Intent intent = new Intent(this, WorldMapGame.class);
-        startActivity(intent);
+        Log.i("GeoGame Home", "To World Map");
+        setContentView(R.layout.world_map_game);
     }
 
 
