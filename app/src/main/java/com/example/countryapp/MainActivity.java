@@ -12,6 +12,10 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         begin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String currentDate = new SimpleDateFormat("MM-dd-yyyy", Locale.getDefault()).format(new Date());
+                Log.d("TIME TEST", currentDate);
                 setContentView(R.layout.activity_world__map );
                 Log.i("Starter", "clicked");
             }
