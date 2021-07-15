@@ -51,6 +51,8 @@ public class Country {
     private Country(Country c) {
         this(c.landMass, c.funFact1, c.countryName, c.population, c.capital, c.language, c.description);
     }
+
+    //This sets the date for COD and is entered when the COD button is pressed
     public static void setDate(int year, int month, int day) {
         cYear = year;
         cMonth = month;
@@ -79,12 +81,7 @@ public class Country {
     public static int getCountryListSize() {
         return countryList.size();
     }
-    public static Country getCountry(int index) {
-        if (index >= 0 && index < countryList.size())
-            return countryList.get(index);
-        else
-            return null;
-    }
+    //Accesses array list; returns a Country with null values instead of null
     public MultipleChoice getLandMassMC() {
         return landMassMC;
     }
@@ -101,6 +98,16 @@ public class Country {
     public int getNumCountries() {
         return numCountries;
     }
+    //so that it doesn't create a crash if called
+    public static Country getCountry(int index) {
+        if (index >= 0 && index < countryList.size())
+            return countryList.get(index);
+        else
+            return new Country(0, "none", "none", 0,
+                    "none", "none", "none");
+    }
+
+    // Methods for editing the array lists
     private static void deleteAllNotUsed() {
         while (nonUsedCountries.size() > 0) {
             nonUsedCountries.remove(0);
@@ -139,6 +146,30 @@ public class Country {
         countryList.remove(countryList.size() - 1);
         cod.used = true;
         return cod;
+    }
+    // This will set the Countries of the day; s means start, e means end
+    public static void setCountriesOfTheDay(int sYear, int eYear) {
+        int[] months = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        for (int y = sYear; y <= eYear; y++) {
+            if (y % 4 == 0) {
+                if (y % 100 == 0) {
+                    if (y % 400 == 0)
+                        months[2] = 29;
+                    else
+                        months [2] = 28;
+                }
+                else
+                    months[2] = 29;
+            }
+
+            else
+                months[2] = 28;
+            for (int m = 1; m <= 12; m++) {
+                for (int d = 1; d <= months[m]; d++) {
+                }
+            }
+        }
+
     }
 
     public String getCodHeader() {
