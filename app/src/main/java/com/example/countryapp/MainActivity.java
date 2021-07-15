@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 int year = new Date().getYear() + 1900;
                 int month = new Date().getMonth();
                 int day = new Date().getDay();
-                Country.setDate(year, month, day);
+                CountriesOfTheDay.setDate(year, month, day);
+                CountriesOfTheDay.getCOD();
                 Log.i("COD", "Date" + month + "/" + day + "/" + year);
                 setContentView(R.layout.activity_country_of_day);
             }

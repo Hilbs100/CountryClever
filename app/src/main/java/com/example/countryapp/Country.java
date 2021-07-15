@@ -19,9 +19,6 @@ public class Country {
     private final String capital;
     private final String language;
     private final String description;
-    private static int cYear;
-    private static int cMonth;
-    private static int cDay;
     private MultipleChoice landMassMC;
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
@@ -45,18 +42,16 @@ public class Country {
         this.language = language;
         this.description = description;
         this.used = false;
-        //this.populate();
         countryList.add(this);
     }
-    private Country(Country c) {
-        this(c.landMass, c.funFact1, c.countryName, c.population, c.capital, c.language, c.description);
-    }
-
-    //This sets the date for COD and is entered when the COD button is pressed
-    public static void setDate(int year, int month, int day) {
-        cYear = year;
-        cMonth = month;
-        cDay = day;
+    public Country(Country c) {
+        this.landMass = c.landMass;
+        this.funFact1 = c.funFact1;
+        this.countryName = c.countryName;
+        this.population = c.population;
+        this.capital = c.capital;
+        this.language = c.language;
+        this.description = c.description;
     }
 
     // Accessor Methods
@@ -127,12 +122,7 @@ public class Country {
             countryList.get(i).used = false;
         }
     }
-
-    //get randCountry no repeats
-    public static Country setCountryOfTheDay() {
-        reset();
-        deleteAllNotUsed();
-        deleteAllUsed();
+    public static void setUsed() {
         for (int i = 0; i < countryList.size(); i++) {
             if (countryList.get(i).used) {
                 usedCountries.add(countryList.get(i));
@@ -140,6 +130,14 @@ public class Country {
             else
                 nonUsedCountries.add(countryList.get(i));
         }
+    }
+
+    //get randCountry no repeats
+    public static Country setCountryOfTheDay() {
+        reset();
+        deleteAllNotUsed();
+        deleteAllUsed();
+        setUsed();
         int rand = (int)(Math.random() * nonUsedCountries.size());
         Country cod = nonUsedCountries.get(rand);
         countryOfTheDay = new Country(cod);
@@ -150,6 +148,11 @@ public class Country {
     // This will set the Countries of the day; s means start, e means end
     public static void setCountriesOfTheDay(int sYear, int eYear) {
         int[] months = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int rand;
+        reset();
+        deleteAllNotUsed();
+        deleteAllUsed();
+        setUsed();
         for (int y = sYear; y <= eYear; y++) {
             if (y % 4 == 0) {
                 if (y % 100 == 0) {
@@ -166,6 +169,24 @@ public class Country {
                 months[2] = 28;
             for (int m = 1; m <= 12; m++) {
                 for (int d = 1; d <= months[m]; d++) {
+                    if (nonUsedCountries.size() > 0) {
+                        rand = (int) (Math.random() * nonUsedCountries.size());
+                        nonUsedCountries.get(rand).used = true;
+                        usedCountries.add(nonUsedCountries.get(rand));
+                        CountriesOfTheDay cod = new CountriesOfTheDay(nonUsedCountries.remove(rand), y, m, d);
+                    }
+                    else {
+                        reset();
+                        deleteAllNotUsed();
+                        deleteAllUsed();
+                        setUsed();
+                        rand = (int) (Math.random() * nonUsedCountries.size());
+                        nonUsedCountries.get(rand).used = true;
+                        usedCountries.add(nonUsedCountries.get(rand));
+                        CountriesOfTheDay cod = new CountriesOfTheDay(nonUsedCountries.remove(rand), y, m, d);
+                    }
+
+
                 }
             }
         }
