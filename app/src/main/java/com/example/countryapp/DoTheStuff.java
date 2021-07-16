@@ -242,9 +242,16 @@ public class DoTheStuff {
         //Countries
         Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian", "Located in the northern hemisphere, it is possibly one of the " +
                 "coldest places on earth.");
-        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish, English",
+        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish",
                 "Ireland is a small island off of Britain, and it is located in the Northern Hemisphere. It is also well known for its castles and its beautiful scenery");
 
+        Country germany = new Country(137988, "65% of the highways in Germany have no speed limit", "Germany", 83020000, "Berlin", "German",
+                "Germany is a landlocked Country in Europe.  It is known for its drinks, castles, and highways, which are called Autobahn's");
 
+        Country united_kingdom = new Country(93628, "London has the largest Library in the world with over 170 million items", "United Kingdom", 67890000, "London", "English",
+                "The UK is an Island country off the continent of Europe.  This county is known for its medieval structures such as castles.");
+
+        Country france = new Country(93628, "London has the largest Library in the world with over 170 million items", "France", 67890000, "Paris", "French",
+                "The UK is an Island country off the continent of Europe.  This county is known for its medieval structures such as castles.");
     }
 }
