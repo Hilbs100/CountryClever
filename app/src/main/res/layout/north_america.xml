@@ -12,7 +12,7 @@
         android:id="@+id/mexico"
         android:layout_width="250dp"
         android:layout_height="226dp"
-        android:background="@drawable/mexicoCutOut"
+        android:background="@drawable/mexicocutout"
         android:scaleX="1"
         android:scaleY="1"
         android:translationX="75dp"
