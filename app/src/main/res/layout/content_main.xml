@@ -44,9 +44,11 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="48dp"
         android:text="@string/country_of_the_day"
+        android:onClick="openCOD"
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="OnClick" />
     <!--removed the onClick attribute because it was causing errors -->
 
     <TextView
