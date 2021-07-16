@@ -21,13 +21,5 @@
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="center" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="top|center"
-        app:popupTheme="@style/Theme.CountryApp.PopupOverlay" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

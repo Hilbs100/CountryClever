@@ -10,33 +10,33 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
+    boolean repeat = false;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        DoTheStuff.run();
-
-        Button cod = (Button) findViewById(R.id.country_of_day_button);
+        if (!repeat) {
+            DoTheStuff.run();
+            repeat = true;
+        }
+/*        Button cod = (Button) findViewById(R.id.country_of_day_button);
         cod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int year = new Date().getYear() + 1900;
-                int month = new Date().getMonth();
-                int day = new Date().getDay();
+                int month = new Date().getMonth() + 1;
+                int day = new Date().getDate();
                 CountriesOfTheDay.setDate(year, month, day);
                 CountriesOfTheDay.getCOD();
-                Log.i("COD", "Date" + month + "/" + day + "/" + year);
+                Log.i("COD", "Date: " + month + "/" + day + "/" + year);
                 setContentView(R.layout.activity_country_of_day);
             }
-        });
+        });*/
 
         Button begin = (Button) findViewById(R.id.beginButton);
         begin.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void openCOD(View v) {
+        Intent intent = new Intent(this, CountryOfDay.class);
+        int year = new Date().getYear() + 1900;
+        int month = new Date().getMonth() + 1;
+        int day = new Date().getDate();
+        CountriesOfTheDay.setDate(year, month, day);
+        CountriesOfTheDay.getCOD();
+        Log.i("COD", "Date: " + month + "/" + day + "/" + year);
+        startActivity(intent);
+    }
+
 
 
 
@@ -94,10 +105,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Canada", "Clicked");
     }
 
-    public void goBack(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
+
     @SuppressLint("ResourceType")
     public void goToNA(View v) {
         setContentView(R.layout.north_america);

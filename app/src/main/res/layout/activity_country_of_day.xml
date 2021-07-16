@@ -17,22 +17,32 @@
         android:text="@string/previous"
         android:onClick="goBack"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="onClick"/>
 
     <TextView
         android:id="@+id/body"
-        android:layout_width="406dp"
+        android:layout_width="0dp"
         android:layout_height="512dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="@string/country_description"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header" />
 
     <TextView
         android:id="@+id/header"
-        android:layout_width="411dp"
-        android:layout_height="147dp"
+        android:layout_width="210dp"
+        android:layout_height="116dp"
+        android:gravity="center"
         android:text="@string/country_name"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
