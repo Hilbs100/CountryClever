@@ -104,6 +104,11 @@ public class MainActivity extends AppCompatActivity {
         GeographyGame.getMap(1).pick("Canada");
         Log.i("Canada", "Clicked");
     }
+    public void returnHome(View v) {
+        setContentView(R.layout.activity_main);
+    }
+
+
 
 
     @SuppressLint("ResourceType")

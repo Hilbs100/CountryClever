@@ -159,7 +159,7 @@
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:clickable="true"
-        android:onClick="goBack"
+        android:onClick="returnHome"
         android:text="Back to home screen"
         android:textSize="24sp"
         app:backgroundTint="#2196F3"
