@@ -239,9 +239,9 @@ public class DoTheStuff {
         GeographyGame.addMap(oceania);
 
         //Countries
-        Country russia = new Country(6612000, "Putin on the Ritz", "Russia", 144400000, "Moscow", "Russian", "Located in the northern hemisphere, it contains some of the " +
+        Country russia = new Country(6612000, "Russia is home to the trans-siberian railway, which has earned the uorld record of the longest train line", "Russia", 144400000, "Moscow", "Russian", "Located in the northern hemisphere, it contains some of the " +
                 "coldest places on earth.");
-        Country ireland = new Country(32595, "There are no leprechauns here", "Ireland", 4904000, "Dublin", "Irish",
+        Country ireland = new Country(32595, "There are no snakes here", "Ireland", 4904000, "Dublin", "Irish",
                 "Ireland is a small island off of Britain, and it is located in the Northern Hemisphere. It is also well known for its castles and its beautiful scenery");
 
         Country germany = new Country(137988, "65% of the highways in Germany have no speed limit", "Germany", 83020000, "Berlin", "German",
@@ -250,7 +250,13 @@ public class DoTheStuff {
         Country unitedKingdom = new Country(93628, "London has the largest Library in the world with over 170 million items", "United Kingdom", 67890000, "London", "English",
                 "The UK is an Island country off the continent of Europe.  This county is known for its medieval structures such as castles.");
 
-        Country france = new Country(93628, "London has the largest Library in the world with over 170 million items", "France", 67890000, "Paris", "French",
-                "The UK is an Island country off the continent of Europe.  This county is known for its medieval structures such as castles.");
+        Country france = new Country(248573, "France is the most popular tourist destination in the world", "France", 67060000, "Paris", "French",
+                "France is the biggest country in the European Union, and it is known for its food, beaches, and the eiffel tower");
+
+        Country italy = new Country(116348, "13 Shakespere plays are located in Italy", "Italy", 60360000, "Rome", "Italian",
+                "Italy is a country near the south of Europe.  It is widely known for its ancient roman structures.");
+
+        Country spain = new Country(195364, "The southernmost part of Spain is only 5 miles from the Africa", "Spain", 46940000, "Madrid", "Spanish",
+                "Spain is a country in the southwest part of Europe.  It is known for its beaches, and small towns");
     }
 }
