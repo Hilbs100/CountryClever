@@ -259,5 +259,20 @@ public class DoTheStuff {
 
         Country spain = new Country(195364, "The southernmost part of Spain is only 5 miles from Africa!", "Spain", 46940000, "Madrid", "Spanish",
                 "Spain is a country in the southwest part of Europe.  It is known for its beaches, and beautiful small towns.");
+
+        Country ukraine = new Country(233062, "Ukraine has the deepest train station, which is 350 feet below the ground", "Ukraine", 44390000, "Kyiv", "Ukranian",
+                "Ukraine is the second largest country in Europe, and is known for its ancient structures.");
+
+        Country poland = new Country(120726, "Poland has Europe's  oldest restaurant, which has been open since 1275", "Poland", 37970000, "Warsaw", "Polish",
+                "Poland is known for its rich historical sites, including sites from world war 2, and the cold war");
+
+        Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill", "Romania", 19410000, "Madrid", "Spanish",
+                "Romania is known for its natural beauty, and its medieval fortresses");
+
+        Country netherlands = new Country(16040, "The Netherlands accounts for 90 percent of the worlds tulip farms", "Netherlands", 17280000, "Amsterdam", "Dutch",
+                "The Netherlands are known for their huge tulip farms, and the city of Amsterdam");
+
+        Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
+                "Belgium is best known for its food.  It is also the the headquarters for NATO and the US");
     }
 }
