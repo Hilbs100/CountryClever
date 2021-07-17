@@ -207,10 +207,12 @@ public class Country {
         body += this.getPopulation();
         body += "\nLandmass: ";
         body += this.getLandMass();
-        body += "\nLanguage: ";
+        body += " square miles\nLanguage: ";
         body += this.getLanguage();
         body += "\nFun Fact: ";
         body += this.getFunFact1();
+        body += "\n Description: ";
+        body += this.description;
         return body;
     }
 
