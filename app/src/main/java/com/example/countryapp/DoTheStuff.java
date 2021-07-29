@@ -274,5 +274,22 @@ public class DoTheStuff {
 
         Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
                 "Belgium is best known for its food.  It is also the the headquarters for NATO and the US");
+
+        // South America
+
+        Country argentina = new Country(1074000, "Argentina was the first country to create an animated feature film which later paved the way for Walt Disney.", "Argentina", 44940000, "Buenos Aires", "Spanish",
+                "Argentina borders Chile and is one of the Southern-most countries in the world. Due to the fertility of the soil, Argentina is a massive agricultural exporter and has Latin America's third largest economy.");
+
+        Country bolivia = new Country(424200, "La Paz is the unofficial highest capital city in the world at 11,975 feet above sea level.", "Bolivia", 11510000, "La Paz", "Spanish",
+                "Bolivia is located on the Western side of South America, next to Brazil. Tourism is one of Bolivia's main sources of revenue with some of the attractions including La Paz and Torotoro National Park.");
+
+        Country brazil = new Country(3288000, "Brazil's football, or soccer, team has won 5 World Cup Championships.", "Brazil", 211000000, "Brasilia", "Portuguese",
+                "Located in South America, Brazil is the 5th largest country on Earth. Tourism due to the Amazon Rain Forest and Brazil's beautiful coast lines accounts for around 8% of Brazil's overall GDP. ");
+
+        Country chile = new Country(292260, "Due to its close proximity to Antarctica, Penguins can be found on Chile's coastlines!", "Chile", 18950000, "Santiago" , "Spanish",
+                "Located on the corn of South America, Chile is the southernmost country in the Americas. Along with Peru" +
+                        " it still holds some historical sights from the times of the Inca which gathers historians and curious travelers alike towards the Andes Mountains.");
+
+
     }
 }
