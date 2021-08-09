@@ -290,6 +290,24 @@ public class DoTheStuff {
                 "Located on the corn of South America, Chile is the southernmost country in the Americas. Along with Peru" +
                         " it still holds some historical sights from the times of the Inca which gathers historians and curious travelers alike towards the Andes Mountains.");
 
+        Country columbia = new Country(441200, "Columbia is the world's largest exporter of emperalds (between 70-90%)", "Columbia", 50340000, "Bogotá", "Spanish",
+                "Columbia is the fifth largest country in Latin America, and home to the world's second largest population of spanish speaking people." +
+                        " Through its center run the towering, snow-covered volcanoes and mountains of the Andes. Tropical beaches line the north and west.");
+
+        Country ecuador = new Country(109483, "Ecuador is the closest country to space", "ecuador", 17370000, "Quito", "Spanish",
+                "Ecuador is located in the western corner at the top of the South American continent. Ecuador is named after the Equator, the imaginary " +
+                        "line around the Earth that splits the country in two. Most of the country is in the Southern Hemisphere.");
+
+        Country guyana = new Country(83000, "Known as the ‘land of many waters,’ the world’s widest and longest single-drop waterfall is located on Guyana’s Potaro River in the Kaieteur National Park.", "Guyana",
+                782722, "Georgetown", "English", "Guyana is in the north-east of South America. Guyana has a low-lying, narrow coastal belt, hilly tropical forest and high savannah uplands.");
+
+        Country paraguay = new Country(157048, "Though surrounded on all sides by land, Paraguay not only has a navy, but it has the largest one out of all countries without a coastline.", "Paraguay",
+                7045000, "Asunción", "Spanish and Guaraní", "Paraguay is a country in South America." +
+                " The government system is a presidential republic; the chief of state and head of government is the president.");
+
+        Country peru = new Country(496200, "Three-quarters of the world's alpaca population lives in Peru. The national animal is the vicuña, a small camelid similar to the alpaca.", "Peru", 32510000,
+                "Lima", "Aymara", "Peru is the third largest country in South America, after Brazil and Argentina. Along Peru's west coast is a narrow strip of desert 1,555 miles (2,500 kilometers) long." +
+                "Ancient people, called the Chimú and the Nasca, first inhabited this region thousands of years ago. ");
 
     }
 }
