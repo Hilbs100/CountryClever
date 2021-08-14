@@ -275,6 +275,20 @@ public class DoTheStuff {
         Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
                 "Belgium is best known for its food.  It is also the the headquarters for NATO and the US");
 
+        Country CzechRepublic  = new Country(30452, "The Czech Republic has over 2000 castles", "Czech Republic", 10650000, "Prague", "Czech",
+                "The Czech Republic, also known as Czechia, is one of the safest countries in the world, and has some of the biggest, and oldest countries in the world");
+
+        Country greece = new Country(50949, "The Official name of Greece, is 'the Hellenic Republic'", "Greece", 10720000, "Athens", "Greek",
+                "Greece is known for its beaches, scenery, and ancient architecture");
+
+        Country Portugal = new Country(35063, "The oldest book store (opened in 1732) is in Libson", "Portugal", 10280000, "Libson", "Portugeese",
+                "Portugal is known for its beaches, surfing, and climate");
+
+        Country Sweden = new Country(173860, "Sweden is where the first pacemaker was implanted", "Sweden", 10230000, "Stockholm", "Swedish",
+                "Sweden is known for its ice hotels, the northern lights, and the high quality of living");
+
+        Country Hungary = new Country(35919, "Hungary has won an olympic gold in every olympic they have competed in", "Hungary", 9773000, "Budapest", "Hungarian",
+                "Hungary is known for its unique language, hot springs, and thermal spas");
         // South America
 
         Country argentina = new Country(1074000, "Argentina was the first country to create an animated feature film which later paved the way for Walt Disney.", "Argentina", 44940000, "Buenos Aires", "Spanish",
