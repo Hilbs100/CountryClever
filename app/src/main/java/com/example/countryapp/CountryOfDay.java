@@ -18,7 +18,7 @@ public class CountryOfDay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("COD", "Opened");
-        Country cod = Country.setCountryOfTheDay();
+        Country cod = Country.getCountryOfTheDay();
         Log.i("COD", cod.getCountryName());
         setContentView(R.layout.activity_country_of_day);
         TextView header = (TextView) findViewById(R.id.header);

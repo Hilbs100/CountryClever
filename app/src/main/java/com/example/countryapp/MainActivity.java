@@ -14,16 +14,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    boolean repeat = false;
+    static int repeat = 0;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (!repeat) {
+        if (repeat == 0) {
             DoTheStuff.run();
-            repeat = true;
         }
+
 /*        Button cod = (Button) findViewById(R.id.country_of_day_button);
         cod.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openCOD(View v) {
         Intent intent = new Intent(this, CountryOfDay.class);
+        repeat = 1;
         int year = new Date().getYear() + 1900;
         int month = new Date().getMonth() + 1;
         int day = new Date().getDate();

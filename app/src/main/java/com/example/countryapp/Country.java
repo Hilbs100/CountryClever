@@ -141,7 +141,6 @@ public class Country {
         int rand = (int)(Math.random() * nonUsedCountries.size());
         Country cod = nonUsedCountries.get(rand);
         countryOfTheDay = new Country(cod);
-        countryList.remove(countryList.size() - 1);
         cod.used = true;
         return cod;
     }
