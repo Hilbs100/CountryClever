@@ -23,6 +23,9 @@ public class Country {
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
+    private static int cYear;
+    private static int cMonth;
+    private static int cDay;
     private boolean used;
     public static Country countryOfTheDay;
     private static final ArrayList<Country> countryList = new ArrayList<>();
@@ -131,17 +134,22 @@ public class Country {
                 nonUsedCountries.add(countryList.get(i));
         }
     }
+    public static void setDate(int year, int month, int day) {
+        cYear = year;
+        cMonth = month;
+        cDay = day;
+    }
 
     //get randCountry no repeats
     public static Country setCountryOfTheDay() {
-        reset();
-        deleteAllNotUsed();
-        deleteAllUsed();
-        setUsed();
-        int rand = (int)(Math.random() * nonUsedCountries.size());
-        Country cod = nonUsedCountries.get(rand);
+        int[] months = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int dayCode = cYear;
+        for (int m = 1; m <= cMonth; m++) {
+            dayCode += months[m];
+        }
+        dayCode += cDay;
+        Country cod = Country.getCountry(cDay % countryList.size());
         countryOfTheDay = new Country(cod);
-        cod.used = true;
         return cod;
     }
     // This will set the Countries of the day; s means start, e means end
