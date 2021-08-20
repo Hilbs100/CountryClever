@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         int year = new Date().getYear() + 1900;
         int month = new Date().getMonth() + 1;
         int day = new Date().getDate();
-        CountriesOfTheDay.setDate(year, month, day);
-        CountriesOfTheDay.getCOD();
+        Country.setDate(year, month, day);
+        Country.setCountryOfTheDay();
         Log.i("COD", "Date: " + month + "/" + day + "/" + year);
         startActivity(intent);
     }

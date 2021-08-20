@@ -148,7 +148,9 @@ public class Country {
             dayCode += months[m];
         }
         dayCode += cDay;
-        Country cod = Country.getCountry(cDay % countryList.size());
+        Log.i("Country", "" + dayCode + " modular: " + dayCode % countryList.size());
+        Log.i("Country", "" + countryList.size());
+        Country cod = Country.getCountry(dayCode % countryList.size());
         countryOfTheDay = new Country(cod);
         return cod;
     }

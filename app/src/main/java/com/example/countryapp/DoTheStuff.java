@@ -273,7 +273,7 @@ public class DoTheStuff {
                 "The Netherlands are known for their huge tulip farms, and the city of Amsterdam");
 
         Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
-                "Belgium is best known for its food.  It is also the the headquarters for NATO and the US");
+                "Belgium is best known for its food.  It is also the the headquarters for NATO and the UN");
 
         Country CzechRepublic  = new Country(30452, "The Czech Republic has over 2000 castles", "Czech Republic", 10650000, "Prague", "Czech",
                 "The Czech Republic, also known as Czechia, is one of the safest countries in the world, and has some of the biggest, and oldest countries in the world");
@@ -322,7 +322,7 @@ public class DoTheStuff {
         Country peru = new Country(496200, "Three-quarters of the world's alpaca population lives in Peru. The national animal is the vicuña, a small camelid similar to the alpaca.", "Peru", 32510000,
                 "Lima", "Aymara", "Peru is the third largest country in South America, after Brazil and Argentina. Along Peru's west coast is a narrow strip of desert 1,555 miles (2,500 kilometers) long." +
                 "Ancient people, called the Chimú and the Nasca, first inhabited this region thousands of years ago. ");
-        Country.setCountryOfTheDay();
+
 
     }
 }
