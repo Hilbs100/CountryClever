@@ -27,6 +27,9 @@ public class CountryOfDay extends AppCompatActivity {
         TextView body = (TextView) findViewById(R.id.body);
         String bodyText = cod.getCodBody();
         body.setText("" + bodyText);
+        Country.getCountryOfTheDay().populate();
+        TextView MC = (TextView) findViewById(R.id.multiplechoice);
+        MC.setText("" + Country.getCountryOfTheDay().mcIntoString());
     }
     public void goBack(View v) {
         Intent intent = new Intent(this, MainActivity.class);

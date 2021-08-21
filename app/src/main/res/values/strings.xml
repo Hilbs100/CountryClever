@@ -15,4 +15,5 @@
     <string name="country_description">Country Description</string>
     <string name="country_name">Country Name</string>
     <string name="country_of_the_day">Country of the Day</string>
+    <string name="MC">multiple choice</string>
 </resources>

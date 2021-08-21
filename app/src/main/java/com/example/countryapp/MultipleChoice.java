@@ -31,6 +31,10 @@ public class MultipleChoice {
       first if statement for notes */
      private void createChoices() {
          // instance variables
+         choiceA = "";
+         choiceB = "";
+         choiceC = "";
+         choiceD = "";
          int rand;
          int a;
          int b;
@@ -99,7 +103,7 @@ public class MultipleChoice {
          }
          if (type.equals("capital")) {
              a = findOtherCountries(countryIndex, -1, -1, -1);
-             choiceA = "" + (Country.getCountry(a).getCapital());
+             choiceA = "" + Country.getCountry(a).getCapital();
              b = findOtherCountries(countryIndex, a, -1, -1);
              choiceB = "" + (Country.getCountry(b).getCapital());
              if (numAnswers >= 3) {

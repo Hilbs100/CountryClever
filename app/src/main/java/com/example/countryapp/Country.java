@@ -263,11 +263,35 @@ public class Country {
 
 
     //populates the Multiple Choice Questions
+    public static void populateAll() {
+        for (int i = 0; i < countryList.size(); i++) {
+            getCountry(i).populate();
+        }
+    }
     public void populate() {
         landMassMC = new MultipleChoice("landMass", 4, this);
         populationMC = new MultipleChoice("population", 4, this);
         capitalMC = new MultipleChoice("capital", 4, this);
         languageMC = new MultipleChoice("language", 4, this);
+    }
+    public String mcIntoString() {
+        String out = "Capital: \nChoice A: " + this.getCapitalMC().getChoiceA();
+        out += "\nChoice B: " +  this.getCapitalMC().getChoiceB();
+        out += "\nChoice C: " + this.getCapitalMC().getChoiceC();
+        out += "\nChoice D: " + this.getCapitalMC().getChoiceD();
+        out += "\nPopulation: \nChoice A: " + this.getPopulationMC().getChoiceA();
+        out += "\nChoice B: " +  this.getPopulationMC().getChoiceB();
+        out += "\nChoice C: " + this.getPopulationMC().getChoiceC();
+        out += "\nChoice D: " + this.getPopulationMC().getChoiceD();
+        out += "\nLand Mass: \nChoice A: " + this.getLandMassMC().getChoiceA();
+        out += "\nChoice B: " +  this.getLandMassMC().getChoiceB();
+        out += "\nChoice C: " + this.getLandMassMC().getChoiceC();
+        out += "\nChoice D: " + this.getLandMassMC().getChoiceD();
+        out += "\nLanguage: \nChoice A: " + this.getLanguageMC().getChoiceA();
+        out += "\nChoice B: " +  this.getLanguageMC().getChoiceB();
+        out += "\nChoice C: " + this.getLanguageMC().getChoiceC();
+        out += "\nChoice D: " + this.getLanguageMC().getChoiceD();
+        return out;
     }
     // This converts all of the objects into .ser files to be used later
     public static void saveAll() {
