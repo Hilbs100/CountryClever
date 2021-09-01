@@ -1,5 +1,7 @@
 package com.example.countryapp;
 
+import android.util.Log;
+
 public class MultipleChoice {
     // type indicates which "type" of question; i.e. capital, population, language, etc.
     private String type;
@@ -12,6 +14,7 @@ public class MultipleChoice {
      private String choiceC;
      private String choiceD;
      private String correctChoice;
+     private static double score;
      //Constructor
      public MultipleChoice(String type, int numAnswers, Country country) {
          this.type = type;
@@ -25,6 +28,46 @@ public class MultipleChoice {
          this.country = country;
          countryIndex = Country.indexOfCountry(country);
          createChoices();
+     }
+     public void submitAnswer(String choice) {
+         Log.i("MC", "Answer submitted");
+         if (choice.equals("A")) {
+             Log.i("MC", "Choice A chosen");
+             if (correctChoice.equals("a")) {
+                 score++;
+                 Log.i("MC", "Choice A correct");
+             }
+
+         }
+         if (choice.equals("B")) {
+             Log.i("MC", "Choice B chosen");
+             if (correctChoice.equals("b")){
+                 score++;
+                 Log.i("MC", "Choice B correct");
+             }
+         }
+         if (choice.equals("C")) {
+             Log.i("MC", "Choice C chosen");
+             if (correctChoice.equals("c")){
+                 score++;
+                 Log.i("MC", "Choice C correct");
+             }
+         }
+         if (choice.equals("D")) {
+             Log.i("MC", "Choice D chosen");
+             if (correctChoice.equals("d")) {
+                 score++;
+                 Log.i("MC", "Choice D correct");
+             }
+         }
+
+     }
+     public static void reset() {
+         score = 0;
+     }
+     public static double score() {
+         Log.i("MC", "" + 100 * (score/4.0));
+         return 100 * (score/4.0);
      }
      /* This method creates all the choices for the Multiple Choice problem
       All if (type.equals("blah")) contain the same basic code in them, so look at the
