@@ -72,7 +72,7 @@ public class CountryOfDay extends AppCompatActivity {
         RadioButton landB = (RadioButton)findViewById(R.id.LMb);
         landB.setText("" + cod.getLandMassMC().getChoiceB() + " square miles");
         RadioButton landC = (RadioButton)findViewById(R.id.LMc);
-        landC.setText("" + cod.getLandMassMC().getChoiceC() + "square miles");
+        landC.setText("" + cod.getLandMassMC().getChoiceC() + " square miles");
         RadioButton landD = (RadioButton)findViewById(R.id.LMd);
         landD.setText("" + cod.getLandMassMC().getChoiceD() + " square miles");
 

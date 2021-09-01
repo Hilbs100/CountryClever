@@ -80,17 +80,17 @@ public class MultipleChoice {
             // lowercase if you decide to change something
             rand = (int) ((Math.random() * numAnswers) + 1);
             if (rand == 1) {
-                choiceA = "" + country.getLandMass();
-                correctChoice = choiceA;
+                choiceA = "" + country.getLandMass() ;
+                correctChoice = choiceA + " square miles";
             } else if (rand == 2) {
-                choiceB = "" + country.getLandMass();
-                correctChoice = choiceB;
+                choiceB = "" + country.getLandMass() ;
+                correctChoice = choiceB + " square miles";
             } else if (rand == 3) {
                 choiceC = "" + country.getLandMass();
-                correctChoice = choiceC;
+                correctChoice = choiceC + " square miles";
             } else if (rand == 4) {
                 choiceD = "" + country.getLandMass();
-                correctChoice = choiceD;
+                correctChoice = choiceD + " square miles";
             }
         }
         if (type.equals("population")) {
