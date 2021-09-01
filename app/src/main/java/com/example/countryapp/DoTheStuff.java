@@ -289,9 +289,12 @@ public class DoTheStuff {
 
         Country Hungary = new Country(35919, "Hungary has won an olympic gold in every olympic they have competed in", "Hungary", 9773000, "Budapest", "Hungarian",
                 "Hungary is known for its unique language, hot springs, and thermal spas");
+<<<<<<< HEAD
         Country denmark = new Country(16577, "The highest mountain in Denmark is only 560.6 feet tall.", "Denmark", 5806000, "Copenhagen", "Danish", "Denmark is one of the most peaceful countries in the world and is known for is sustainability, equality, and as the birthplace of Legos.");
 
 
+=======
+>>>>>>> parent of 991602b (Added Denmark)
         // South America
 
         Country argentina = new Country(1074000, "Argentina was the first country to create an animated feature film which later paved the way for Walt Disney.", "Argentina", 44940000, "Buenos Aires", "Spanish",
