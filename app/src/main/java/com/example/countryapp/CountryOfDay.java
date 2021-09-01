@@ -20,6 +20,7 @@ public class CountryOfDay extends AppCompatActivity {
     RadioGroup languageMC;
     RadioGroup populationMC;
     RadioGroup landMassMC;
+    RadioButton radioButton;
     Country cod;
 
 
@@ -127,60 +128,18 @@ public class CountryOfDay extends AppCompatActivity {
         int capitalAnswer = capitalMC.getCheckedRadioButtonId();
         MultipleChoice.reset();
         Log.i("MC", "" + capitalAnswer);
-        if (capitalAnswer == 2131230828) {
-            Log.i("MC", "Answered A");
-            cod.getCapitalMC().submitAnswer("A");
-        }
-        if (capitalAnswer == 2131230829) {
-            Log.i("MC", "Answered B");
-            cod.getCapitalMC().submitAnswer("B");
-        }
-        if (capitalAnswer == 2131230830) {
-            Log.i("MC", "Answered C");
-            cod.getCapitalMC().submitAnswer("C");
-        }
-        if (capitalAnswer == 2131230831) {
-            Log.i("MC", "Answered D");
-            cod.getCapitalMC().submitAnswer("D");
-        }
+        radioButton = findViewById(capitalAnswer);
+        cod.getCapitalMC().submitAnswer("" + radioButton.getText());
 
         int languageAnswer = languageMC.getCheckedRadioButtonId();
         Log.i("MC", "" + languageAnswer);
-        if (languageAnswer == 2131230945) {
-            Log.i("MC", "Answered A");
-            cod.getLanguageMC().submitAnswer("A");
-        }
-        if (languageAnswer == 2131230946) {
-            Log.i("MC", "Answered B");
-            cod.getLanguageMC().submitAnswer("B");
-        }
-        if (languageAnswer == 2131230947) {
-            Log.i("MC", "Answered C");
-            cod.getLanguageMC().submitAnswer("C");
-        }
-        if (languageAnswer == 2131230948) {
-            Log.i("MC", "Answered D");
-            cod.getLanguageMC().submitAnswer("D");
-        }
+        radioButton = findViewById(languageAnswer);
+        cod.getLanguageMC().submitAnswer("" + radioButton.getText());
 
         int landMassAnswer = landMassMC.getCheckedRadioButtonId();
         Log.i("MC", "" + landMassAnswer);
-        if (landMassAnswer == 2131230945) {
-            Log.i("MC", "Answered A");
-            cod.getLandMassMC().submitAnswer("A");
-        }
-        if (landMassAnswer == 2131230946) {
-            Log.i("MC", "Answered B");
-            cod.getLandMassMC().submitAnswer("B");
-        }
-        if (landMassAnswer == 2131230947) {
-            Log.i("MC", "Answered C");
-            cod.getLandMassMC().submitAnswer("C");
-        }
-        if (landMassAnswer == 2131230948) {
-            Log.i("MC", "Answered D");
-            cod.getLandMassMC().submitAnswer("D");
-        }
+        radioButton = findViewById(landMassAnswer);
+        cod.getLandMassMC().submitAnswer("" + radioButton.getText());
 
         MultipleChoice.score();
 
