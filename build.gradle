@@ -4,20 +4,11 @@ buildscript {
         google()
         jcenter()
     }
-    dependencies {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        classpath 'com.android.tools.build:gradle:7.0.1'
-=======
+    dependencies{
         classpath "com.android.tools.build:gradle:4.1.3"
->>>>>>> parent of 991602b (Added Denmark)
-=======
-        classpath 'com.android.tools.build:gradle:7.0.0'
->>>>>>> parent of ba9e6aa (Updated Gradle to 7.0.1)
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
+
 }
 
 allprojects {

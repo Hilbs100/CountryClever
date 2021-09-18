@@ -4,6 +4,7 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/north_america"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -16,6 +17,14 @@
         android:scaleX="1"
         android:scaleY="1"
         android:translationX="75dp"
-        android:translationY="400dp" />
+        android:translationY="400dp"
+        app:backgroundTint="#C51919" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/mexicocutout" />
 
 </LinearLayout>

@@ -289,15 +289,9 @@ public class DoTheStuff {
 
         Country Hungary = new Country(35919, "Hungary has won an olympic gold in every olympic they have competed in", "Hungary", 9773000, "Budapest", "Hungarian",
                 "Hungary is known for its unique language, hot springs, and thermal spas");
-<<<<<<< HEAD
+
         Country denmark = new Country(16577, "The highest mountain in Denmark is only 560.6 feet tall.", "Denmark", 5806000, "Copenhagen", "Danish", "Denmark is one of the most peaceful countries in the world and is known for is sustainability, equality, and as the birthplace of Legos.");
-<<<<<<< HEAD
 
-
-=======
->>>>>>> parent of 991602b (Added Denmark)
-=======
->>>>>>> parent of ba9e6aa (Updated Gradle to 7.0.1)
         // South America
 
         Country argentina = new Country(1074000, "Argentina was the first country to create an animated feature film which later paved the way for Walt Disney.", "Argentina", 44940000, "Buenos Aires", "Spanish",
@@ -331,9 +325,6 @@ public class DoTheStuff {
         Country peru = new Country(496200, "Three-quarters of the world's alpaca population lives in Peru. The national animal is the vicuña, a small camelid similar to the alpaca.", "Peru", 32510000,
                 "Lima", "Aymara", "Peru is the third largest country in South America, after Brazil and Argentina. Along Peru's west coast is a narrow strip of desert 1,555 miles (2,500 kilometers) long." +
                 "Ancient people, called the Chimú and the Nasca, first inhabited this region thousands of years ago. ");
-
-
-
 
     }
 }
