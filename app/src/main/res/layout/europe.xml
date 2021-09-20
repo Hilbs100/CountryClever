@@ -10,7 +10,13 @@
         android:id="@+id/imageView2"
         android:layout_width="389dp"
         android:layout_height="574dp"
-        app:srcCompat="@drawable/europegang"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/europegang" />
 </androidx.constraintlayout.widget.ConstraintLayout>
