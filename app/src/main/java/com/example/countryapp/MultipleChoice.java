@@ -109,16 +109,16 @@ public class MultipleChoice {
             rand = (int)((Math.random() * numAnswers) + 1);
             if (rand == 1) {
                 choiceA = "" + country.getPopulation();
-                correctChoice = choiceA + "people";
+                correctChoice = choiceA + " people";
             } else if (rand == 2) {
                 choiceB = "" + country.getPopulation();
-                correctChoice = choiceB + "people";
+                correctChoice = choiceB + " people";
             } else if (rand == 3) {
                 choiceC = "" + country.getPopulation();
-                correctChoice = choiceC + "people";
+                correctChoice = choiceC + " people";
             } else if (rand == 4) {
                 choiceD = "" + country.getPopulation();
-                correctChoice = choiceD + "people";
+                correctChoice = choiceD + " people";
             }
         }
         if (type.equals("capital")) {

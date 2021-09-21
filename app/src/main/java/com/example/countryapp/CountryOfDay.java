@@ -2,6 +2,7 @@ package com.example.countryapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -76,6 +77,7 @@ public class CountryOfDay extends AppCompatActivity {
         landC.setText("" + cod.getLandMassMC().getChoiceC() + " square miles");
         RadioButton landD = (RadioButton)findViewById(R.id.LMd);
         landD.setText("" + cod.getLandMassMC().getChoiceD() + " square miles");
+        landD.setTextColor(Color.GREEN);
 
         TextView popQues = (TextView) findViewById(R.id.popQues);
         popQues.setText("The population of " + cod.getCountryName() + " is: ");
@@ -134,28 +136,35 @@ public class CountryOfDay extends AppCompatActivity {
 
     }
     //2131230828
-    public void goBack(View v) {
+    public void goToScore(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         int capitalAnswer = capitalMC.getCheckedRadioButtonId();
         MultipleChoice.reset();
-        Log.i("MC", "" + capitalAnswer);
-        radioButton = findViewById(capitalAnswer);
-        cod.getCapitalMC().submitAnswer("" + radioButton.getText());
+        if (capitalAnswer != -1) {
+            Log.i("MC", "" + capitalAnswer);
+            radioButton = findViewById(capitalAnswer);
+            cod.getCapitalMC().submitAnswer("" + radioButton.getText());
+        }
 
         int languageAnswer = languageMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + languageAnswer);
-        radioButton = findViewById(languageAnswer);
-        cod.getLanguageMC().submitAnswer("" + radioButton.getText());
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + languageAnswer);
+            radioButton = findViewById(languageAnswer);
+            cod.getLanguageMC().submitAnswer("" + radioButton.getText());
+        }
 
         int landMassAnswer = landMassMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + landMassAnswer);
-        radioButton = findViewById(landMassAnswer);
-        cod.getLandMassMC().submitAnswer("" + radioButton.getText());
-
+        if (landMassAnswer != -1) {
+            Log.i("MC", "" + landMassAnswer);
+            radioButton = findViewById(landMassAnswer);
+            cod.getLandMassMC().submitAnswer("" + radioButton.getText());
+        }
         int populationAnswer = populationMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + populationAnswer);
-        radioButton = findViewById(populationAnswer);
-        cod.getLandMassMC().submitAnswer("" + radioButton.getText());
+        if (populationAnswer != -1) {
+            Log.i("MC", "" + populationAnswer);
+            radioButton = findViewById(populationAnswer);
+            cod.getPopulationMC().submitAnswer("" + radioButton.getText());
+        }
         MultipleChoice.score();
 
         startActivity(intent);
