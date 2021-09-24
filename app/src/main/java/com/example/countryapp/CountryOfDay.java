@@ -11,6 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.NumberFormat;
 //import the time thingy here
 
 
@@ -43,7 +45,7 @@ public class CountryOfDay extends AppCompatActivity {
         landMassMC = (RadioGroup) findViewById(R.id.LandMass);
         populationMC = (RadioGroup) findViewById(R.id.Population);
 
-
+        NumberFormat formatting = NumberFormat.getInstance();
 
         TextView capQues = (TextView) findViewById(R.id.capQues);
         capQues.setText("The capital of " + cod.getCountryName() + " is: ");
@@ -81,13 +83,13 @@ public class CountryOfDay extends AppCompatActivity {
         TextView popQues = (TextView) findViewById(R.id.popQues);
         popQues.setText("The population of " + cod.getCountryName() + " is: ");
         RadioButton popA = (RadioButton)findViewById(R.id.popA);
-        popA.setText("" + cod.getPopulationMC().getChoiceA() + " people");
+        popA.setText("" + (cod.getPopulationMC().getChoiceA()) + " people");
         RadioButton popB = (RadioButton)findViewById(R.id.popB);
-        popB.setText("" + cod.getPopulationMC().getChoiceB() + " people");
+        popB.setText("" + (cod.getPopulationMC().getChoiceB()) + " people");
         RadioButton popC = (RadioButton)findViewById(R.id.popC);
-        popC.setText("" + cod.getPopulationMC().getChoiceC() + " people");
+        popC.setText("" + (cod.getPopulationMC().getChoiceC()) + " people");
         RadioButton popD = (RadioButton)findViewById(R.id.popD);
-        popD.setText("" + cod.getPopulationMC().getChoiceD() + " people");
+        popD.setText("" + (cod.getPopulationMC().getChoiceD()) + " people");
 
 
 

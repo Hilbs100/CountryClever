@@ -49,31 +49,39 @@
                     android:layout_height="wrap_content"
                     android:text="TextView"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <RadioButton
                     android:id="@+id/capa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/capb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/capc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/capd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
             </RadioGroup>
 
@@ -95,31 +103,39 @@
                     android:layout_height="wrap_content"
                     android:text="TextView"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <RadioButton
                     android:id="@+id/langA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/langB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/langC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/langD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
             </RadioGroup>
 
@@ -141,31 +157,39 @@
                     android:layout_height="wrap_content"
                     android:text="TextView"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <RadioButton
                     android:id="@+id/LMa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/LMb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/LMc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/LMd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
             </RadioGroup>
 
@@ -182,31 +206,41 @@
                     android:id="@+id/popQues"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
 
                 <RadioButton
                     android:id="@+id/popA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/popB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/popC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/popD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="RadioButton"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
             </RadioGroup>
 

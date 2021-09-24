@@ -2,6 +2,8 @@ package com.example.countryapp;
 
 import android.util.Log;
 
+import java.text.NumberFormat;
+
 public class MultipleChoice {
     // type indicates which "type" of question; i.e. capital, population, language, etc.
     private String type;
@@ -15,6 +17,7 @@ public class MultipleChoice {
     private String choiceD;
     private String correctChoice;
     private static double score;
+
     //Constructor
     public MultipleChoice(String type, int numAnswers, Country country) {
         this.type = type;
@@ -51,6 +54,8 @@ public class MultipleChoice {
      first if statement for notes */
     private void createChoices() {
         // instance variables
+        NumberFormat formatting = NumberFormat.getInstance();
+        formatting.setGroupingUsed(true);
         choiceA = "";
         choiceB = "";
         choiceC = "";
@@ -64,15 +69,15 @@ public class MultipleChoice {
             // Uses the findOtherCountries class to find a country which hasn't been used yet
             a = findOtherCountries(countryIndex, -1, -1, -1);
             //Converts all choices into String form for easy usage as text later
-            choiceA = "" + (Country.getCountry(a).getLandMass());
+            choiceA = "" + formatting.format(Country.getCountry(a).getLandMass());
             b = findOtherCountries(countryIndex, a, -1, -1);
-            choiceB = "" + (Country.getCountry(b).getLandMass());
+            choiceB = "" + formatting.format(Country.getCountry(b).getLandMass());
             if (numAnswers >= 3) {
                 c = findOtherCountries(countryIndex, a, b, -1);
-                choiceC = "" + (Country.getCountry(c).getLandMass());
+                choiceC = "" + formatting.format(Country.getCountry(c).getLandMass());
                 if (numAnswers == 4) {
                     d = findOtherCountries(countryIndex, a, b, c);
-                    choiceD = "" + (Country.getCountry(d).getLandMass());
+                    choiceD = "" + formatting.format(Country.getCountry(d).getLandMass());
                 }
             }
             // This puts the choice in there as it wasn't in there before, replacing one of the
@@ -80,44 +85,44 @@ public class MultipleChoice {
             // lowercase if you decide to change something
             rand = (int) ((Math.random() * numAnswers) + 1);
             if (rand == 1) {
-                choiceA = "" + country.getLandMass() ;
+                choiceA = "" + formatting.format(country.getLandMass()) ;
                 correctChoice = choiceA + " square miles";
             } else if (rand == 2) {
-                choiceB = "" + country.getLandMass() ;
+                choiceB = "" + formatting.format(country.getLandMass()) ;
                 correctChoice = choiceB + " square miles";
             } else if (rand == 3) {
-                choiceC = "" + country.getLandMass();
+                choiceC = "" + formatting.format(country.getLandMass());
                 correctChoice = choiceC + " square miles";
             } else if (rand == 4) {
-                choiceD = "" + country.getLandMass();
+                choiceD = "" + formatting.format(country.getLandMass());
                 correctChoice = choiceD + " square miles";
             }
         }
         if (type.equals("population")) {
             a = findOtherCountries(countryIndex, -1, -1, -1);
-            choiceA = "" + (Country.getCountry(a).getPopulation());
+            choiceA = "" + formatting.format(Country.getCountry(a).getPopulation());
             b = findOtherCountries(countryIndex, a, -1, -1);
-            choiceB = "" + (Country.getCountry(b).getPopulation());
+            choiceB = "" + formatting.format(Country.getCountry(b).getPopulation());
             if (numAnswers >= 3) {
                 c = findOtherCountries(countryIndex, a, b, -1);
-                choiceC = "" + (Country.getCountry(c).getPopulation());
+                choiceC = "" + formatting.format(Country.getCountry(c).getPopulation());
                 if (numAnswers == 4) {
                     d = findOtherCountries(countryIndex, a, b, c);
-                    choiceD = "" + (Country.getCountry(d).getPopulation());
+                    choiceD = "" + formatting.format(Country.getCountry(d).getPopulation());
                 }
             }
             rand = (int)((Math.random() * numAnswers) + 1);
             if (rand == 1) {
-                choiceA = "" + country.getPopulation();
+                choiceA = "" + formatting.format(country.getPopulation());
                 correctChoice = choiceA + " people";
             } else if (rand == 2) {
-                choiceB = "" + country.getPopulation();
+                choiceB = "" + formatting.format(country.getPopulation());
                 correctChoice = choiceB + " people";
             } else if (rand == 3) {
-                choiceC = "" + country.getPopulation();
+                choiceC = "" + formatting.format(country.getPopulation());
                 correctChoice = choiceC + " people";
             } else if (rand == 4) {
-                choiceD = "" + country.getPopulation();
+                choiceD = "" + formatting.format(country.getPopulation());
                 correctChoice = choiceD + " people";
             }
         }
