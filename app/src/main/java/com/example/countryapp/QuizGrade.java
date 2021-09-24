@@ -15,6 +15,8 @@ public class QuizGrade extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.quiz_results);
+
         TextView score = (TextView) findViewById(R.id.grade);
         score.setText("" + MultipleChoice.score() + "%");
         if (MultipleChoice.score() == 100.0)
@@ -24,7 +26,10 @@ public class QuizGrade extends AppCompatActivity {
         }
         else
             score.setTextColor(Color.YELLOW);
-        setContentView(R.layout.quiz_results);
+    }
+    public void goHome(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
 

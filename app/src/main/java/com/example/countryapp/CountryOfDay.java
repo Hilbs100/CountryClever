@@ -77,7 +77,6 @@ public class CountryOfDay extends AppCompatActivity {
         landC.setText("" + cod.getLandMassMC().getChoiceC() + " square miles");
         RadioButton landD = (RadioButton)findViewById(R.id.LMd);
         landD.setText("" + cod.getLandMassMC().getChoiceD() + " square miles");
-        landD.setTextColor(Color.GREEN);
 
         TextView popQues = (TextView) findViewById(R.id.popQues);
         popQues.setText("The population of " + cod.getCountryName() + " is: ");
@@ -94,49 +93,41 @@ public class CountryOfDay extends AppCompatActivity {
 
     }
     public void scoreTest(View v) {
+
+        Intent intent = new Intent(this, QuizGrade.class);
         int capitalAnswer = capitalMC.getCheckedRadioButtonId();
         MultipleChoice.reset();
-        Log.i("MC", "" + capitalAnswer);
-        if (capitalAnswer == 2131230828) {
-            Log.i("MC", "Answered A");
-            cod.getCapitalMC().submitAnswer("A");
-        }
-        if (capitalAnswer == 2131230829) {
-            Log.i("MC", "Answered B");
-            cod.getCapitalMC().submitAnswer("B");
-        }
-        if (capitalAnswer == 2131230830) {
-            Log.i("MC", "Answered C");
-            cod.getCapitalMC().submitAnswer("C");
-        }
-        if (capitalAnswer == 2131230831) {
-            Log.i("MC", "Answered D");
-            cod.getCapitalMC().submitAnswer("D");
+        if (capitalAnswer != -1) {
+            Log.i("MC", "" + capitalAnswer);
+            radioButton = findViewById(capitalAnswer);
+            cod.getCapitalMC().submitAnswer("" + radioButton.getText());
         }
 
         int languageAnswer = languageMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + languageAnswer);
-        if (languageAnswer == 2131230728) {
-            Log.i("MC", "Answered A");
-            cod.getLanguageMC().submitAnswer("A");
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + languageAnswer);
+            radioButton = findViewById(languageAnswer);
+            cod.getLanguageMC().submitAnswer("" + radioButton.getText());
         }
-        if (languageAnswer == 2131230729) {
-            Log.i("MC", "Answered B");
-            cod.getLanguageMC().submitAnswer("B");
+
+        int landMassAnswer = landMassMC.getCheckedRadioButtonId();
+        if (landMassAnswer != -1) {
+            Log.i("MC", "" + landMassAnswer);
+            radioButton = findViewById(landMassAnswer);
+            cod.getLandMassMC().submitAnswer("" + radioButton.getText());
         }
-        if (languageAnswer == 2131230730) {
-            Log.i("MC", "Answered C");
-            cod.getLanguageMC().submitAnswer("C");
+        int populationAnswer = populationMC.getCheckedRadioButtonId();
+        if (populationAnswer != -1) {
+            Log.i("MC", "" + populationAnswer);
+            radioButton = findViewById(populationAnswer);
+            cod.getPopulationMC().submitAnswer("" + radioButton.getText());
         }
-        if (languageAnswer == 2131230731) {
-            Log.i("MC", "Answered D");
-            cod.getLanguageMC().submitAnswer("D");
-        }
+        startActivity(intent);
 
 
     }
     //2131230828
-    public void goToScore(View v) {
+    public void goBack(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         int capitalAnswer = capitalMC.getCheckedRadioButtonId();
         MultipleChoice.reset();

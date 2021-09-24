@@ -4,24 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gravity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <!--perhaps add some fragment stuff to streamline country of day running?-->
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/header"
@@ -80,7 +86,8 @@
                 android:layout_width="393dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                tools:layout_editor_absoluteY="216dp">
 
                 <TextView
                     android:id="@+id/langQues"
@@ -113,6 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="RadioButton" />
+
             </RadioGroup>
 
             <Space
@@ -158,6 +166,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="RadioButton" />
+
             </RadioGroup>
 
             <Space
@@ -167,7 +176,7 @@
             <RadioGroup
                 android:id="@+id/Population"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/popQues"
@@ -198,23 +207,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="RadioButton" />
-            </RadioGroup>
 
-            <Button
-                android:id="@+id/back_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:onClick="goToScore"
-                android:text="@string/previous"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="onClick" />
+            </RadioGroup>
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:onClick="goBack"
+        android:text="@string/previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:ignore="onClick" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:onClick="scoreTest"
+        android:text="Score Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:ignore="onClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
