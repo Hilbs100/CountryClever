@@ -17,6 +17,11 @@ public class QuizGrade extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_results);
 
+        TextView lMFeedback = (TextView) findViewById(R.id.LandMassAnswer);
+        TextView popFeedback = (TextView) findViewById(R.id.PopulationAnswer);
+        TextView capFeedback = (TextView) findViewById(R.id.CapitalAnswer);
+        TextView langFeedback = (TextView) findViewById(R.id.LanguageAnswer);
+
         TextView score = (TextView) findViewById(R.id.grade);
         score.setText("" + MultipleChoice.score() + "%");
         if (MultipleChoice.score() == 100.0)
@@ -26,6 +31,23 @@ public class QuizGrade extends AppCompatActivity {
         }
         else
             score.setTextColor(Color.YELLOW);
+        Country cod = Country.getCountryOfTheDay();
+        if(!cod.getLandMassMC().getWasCorrect()) {
+            lMFeedback.setText("The land mass of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getLandMassMC().getChosenAnswer()
+                    + "\nCorrect Answer: " + cod.getLandMassMC().getCorrectChoice());
+        }
+        if(!cod.getPopulationMC().getWasCorrect()) {
+            popFeedback.setText("The population of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getPopulationMC().getChosenAnswer()
+                    + "\nCorrect Answer: " + cod.getPopulationMC().getCorrectChoice());
+        }
+        if(!cod.getLanguageMC().getWasCorrect()) {
+            langFeedback.setText("The main language of" + cod.getCountryName() + " is: \nYour Answer: " + cod.getLanguageMC().getChosenAnswer()
+                    + "\nCorrect Answer: " + cod.getLanguageMC().getCorrectChoice());
+        }
+        if(!cod.getCapitalMC().getWasCorrect()) {
+            capFeedback.setText("The capital of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getCapitalMC().getChosenAnswer()
+                    + "\nCorrect Answer: " + cod.getCapitalMC().getCorrectChoice());
+        }
     }
     public void goHome(View v) {
         Intent intent = new Intent(this, MainActivity.class);

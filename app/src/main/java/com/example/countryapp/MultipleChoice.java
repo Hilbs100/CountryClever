@@ -15,8 +15,10 @@ public class MultipleChoice {
     private String choiceB;
     private String choiceC;
     private String choiceD;
+    private String chosenAnswer;
     private String correctChoice;
     private static double score;
+    private boolean wasCorrect;
 
     //Constructor
     public MultipleChoice(String type, int numAnswers, Country country) {
@@ -35,12 +37,22 @@ public class MultipleChoice {
     public void submitAnswer(String choice) {
         Log.i("MC", "Answer submitted");
         if (choice.equals(correctChoice)) {
+            chosenAnswer = choice;
             score++;
+            wasCorrect = true;
             Log.i("MC", "Answer was correct");
         }
-        else
+        else {
+            wasCorrect = false;
             Log.i("MC", "Answer was incorrect");
+        }
 
+    }
+    public String getChosenAnswer() {
+        return chosenAnswer;
+    }
+    public boolean getWasCorrect() {
+        return wasCorrect;
     }
     public static void reset() {
         score = 0;
@@ -56,6 +68,8 @@ public class MultipleChoice {
         // instance variables
         NumberFormat formatting = NumberFormat.getInstance();
         formatting.setGroupingUsed(true);
+        wasCorrect = false;
+        chosenAnswer = "None Selected";
         choiceA = "";
         choiceB = "";
         choiceC = "";
