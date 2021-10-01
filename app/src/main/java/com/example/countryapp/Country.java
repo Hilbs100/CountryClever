@@ -143,7 +143,7 @@ public class Country {
     //get randCountry no repeats
     public static Country setCountryOfTheDay() {
         int[] months = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        int dayCode = cYear;
+        int dayCode = cYear * 365 + (cYear/4);
         for (int m = 1; m <= cMonth; m++) {
             dayCode += months[m];
         }
