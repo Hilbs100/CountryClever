@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     public void openCOD(View v) {
         Intent intent = new Intent(this, CountryOfDay.class);
         repeat = 1;
-        int year = new Date().getYear();
+        int year = new Date().getYear() + 1900;
         int month = new Date().getMonth() + 1;
         int day = new Date().getDate();
         Country.setDate(year, month, day);

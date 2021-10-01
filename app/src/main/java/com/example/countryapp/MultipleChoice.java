@@ -1,5 +1,7 @@
 package com.example.countryapp;
 
+import android.util.Log;
+
 public class MultipleChoice {
     // type indicates which "type" of question; i.e. capital, population, language, etc.
     private String type;
@@ -12,6 +14,7 @@ public class MultipleChoice {
      private String choiceC;
      private String choiceD;
      private String correctChoice;
+     private static double score;
      //Constructor
      public MultipleChoice(String type, int numAnswers, Country country) {
          this.type = type;
@@ -25,6 +28,23 @@ public class MultipleChoice {
          this.country = country;
          countryIndex = Country.indexOfCountry(country);
          createChoices();
+     }
+     public void submitAnswer(String choice) {
+         Log.i("MC", "Answer submitted");
+         if (choice.equals(correctChoice)) {
+             score++;
+             Log.i("MC", "Answer was correct");
+         }
+         else
+             Log.i("MC", "Answer was incorrect");
+
+     }
+     public static void reset() {
+         score = 0;
+     }
+     public static double score() {
+         Log.i("MC", "" + 100 * (score/4.0));
+         return 100 * (score/4.0);
      }
      /* This method creates all the choices for the Multiple Choice problem
       All if (type.equals("blah")) contain the same basic code in them, so look at the
@@ -61,16 +81,16 @@ public class MultipleChoice {
              rand = (int) ((Math.random() * numAnswers) + 1);
              if (rand == 1) {
                  choiceA = "" + country.getLandMass();
-                 correctChoice = "a";
+                 correctChoice = choiceA;
              } else if (rand == 2) {
                  choiceB = "" + country.getLandMass();
-                 correctChoice = "b";
+                 correctChoice = choiceB;
              } else if (rand == 3) {
                  choiceC = "" + country.getLandMass();
-                 correctChoice = "c";
+                 correctChoice = choiceC;
              } else if (rand == 4) {
                  choiceD = "" + country.getLandMass();
-                 correctChoice = "d";
+                 correctChoice = choiceD;
             }
          }
          if (type.equals("population")) {
@@ -89,16 +109,16 @@ public class MultipleChoice {
              rand = (int)((Math.random() * numAnswers) + 1);
              if (rand == 1) {
                  choiceA = "" + country.getPopulation();
-                 correctChoice = "a";
+                 correctChoice = choiceA;
              } else if (rand == 2) {
                  choiceB = "" + country.getPopulation();
-                 correctChoice = "b";
+                 correctChoice = choiceB;
              } else if (rand == 3) {
                  choiceC = "" + country.getPopulation();
-                 correctChoice = "c";
+                 correctChoice = choiceC;
              } else if (rand == 4) {
                  choiceD = "" + country.getPopulation();
-                 correctChoice = "d";
+                 correctChoice = choiceD;
              }
          }
          if (type.equals("capital")) {
@@ -117,16 +137,16 @@ public class MultipleChoice {
              rand = (int)((Math.random() * numAnswers) + 1);
              if (rand == 1) {
                  choiceA = "" + country.getCapital();
-                 correctChoice = "a";
+                 correctChoice = choiceA;
              } else if (rand == 2) {
                  choiceB = "" + country.getCapital();
-                 correctChoice = "b";
+                 correctChoice = choiceB;
              } else if (rand == 3) {
                  choiceC = "" + country.getCapital();
-                 correctChoice = "c";
+                 correctChoice = choiceC;
              } else if (rand == 4) {
                  choiceD = "" + country.getCapital();
-                 correctChoice = "d";
+                 correctChoice = choiceD;
              }
          }
          if (type.equals("language")) {
@@ -145,16 +165,16 @@ public class MultipleChoice {
              rand = (int)((Math.random() * numAnswers) + 1);
              if (rand == 1) {
                  choiceA = "" + country.getLanguage();
-                 correctChoice = "a";
+                 correctChoice = choiceA;
              } else if (rand == 2) {
                  choiceB = "" + country.getLanguage();
-                 correctChoice = "b";
+                 correctChoice = choiceB;
              } else if (rand == 3) {
                  choiceC = "" + country.getLanguage();
-                 correctChoice = "c";
+                 correctChoice = choiceC;
              } else if (rand == 4) {
                  choiceD = "" + country.getLanguage();
-                 correctChoice = "d";
+                 correctChoice = choiceD;
              }
          }
      }

@@ -12,7 +12,6 @@
         <activity android:name=".search_globe"></activity>
         <activity android:name=".world_Map" />
         <activity android:name=".CountryOfDay"/>
-        <activity android:name=".QuizGrade"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

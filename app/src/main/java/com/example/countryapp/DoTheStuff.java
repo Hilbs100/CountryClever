@@ -260,7 +260,7 @@ public class DoTheStuff {
         Country spain = new Country(195364, "The southernmost part of Spain is only 5 miles from Africa!", "Spain", 46940000, "Madrid", "Spanish",
                 "Spain is a country in the southwest part of Europe.  It is known for its beaches, and beautiful small towns.");
 
-        Country ukraine = new Country(233062, "Ukraine has the deepest train station, which is 350 feet below the ground", "Ukraine", 44390000, "Kyiv", "Ukrainian",
+        Country ukraine = new Country(233062, "Ukraine has the deepest train station, which is 350 feet below the ground", "Ukraine", 44390000, "Kyiv", "Ukranian",
                 "Ukraine is the second largest country in Europe, and is known for its ancient structures.");
 
         Country poland = new Country(120726, "Poland has Europe's  oldest restaurant, which has been open since 1275", "Poland", 37970000, "Warsaw", "Polish",
@@ -269,19 +269,19 @@ public class DoTheStuff {
         Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill", "Romania", 19410000, "Madrid", "Spanish",
                 "Romania is known for its natural beauty, and its medieval fortresses");
 
-        Country netherlands = new Country(16040, "The Netherlands accounts for 90 percent of the worlds tulip farms", "The Netherlands", 17280000, "Amsterdam", "Dutch",
+        Country netherlands = new Country(16040, "The Netherlands accounts for 90 percent of the worlds tulip farms", "Netherlands", 17280000, "Amsterdam", "Dutch",
                 "The Netherlands are known for their huge tulip farms, and the city of Amsterdam");
 
         Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
                 "Belgium is best known for its food.  It is also the the headquarters for NATO and the UN");
 
-        Country CzechRepublic  = new Country(30452, "The Czech Republic has over 2000 castles", "The Czech Republic", 10650000, "Prague", "Czech",
+        Country CzechRepublic  = new Country(30452, "The Czech Republic has over 2000 castles", "Czech Republic", 10650000, "Prague", "Czech",
                 "The Czech Republic, also known as Czechia, is one of the safest countries in the world, and has some of the biggest, and oldest countries in the world");
 
         Country greece = new Country(50949, "The Official name of Greece, is 'the Hellenic Republic'", "Greece", 10720000, "Athens", "Greek",
                 "Greece is known for its beaches, scenery, and ancient architecture");
 
-        Country Portugal = new Country(35063, "The oldest book store (opened in 1732) is in Libson", "Portugal", 10280000, "Libson", "Portuguese",
+        Country Portugal = new Country(35063, "The oldest book store (opened in 1732) is in Libson", "Portugal", 10280000, "Libson", "Portugeese",
                 "Portugal is known for its beaches, surfing, and climate");
 
         Country Sweden = new Country(173860, "Sweden is where the first pacemaker was implanted", "Sweden", 10230000, "Stockholm", "Swedish",
@@ -311,7 +311,7 @@ public class DoTheStuff {
                 "Columbia is the fifth largest country in Latin America, and home to the world's second largest population of spanish speaking people." +
                         " Through its center run the towering, snow-covered volcanoes and mountains of the Andes. Tropical beaches line the north and west.");
 
-        Country ecuador = new Country(109483, "Ecuador is the closest country to space", "Ecuador", 17370000, "Quito", "Spanish",
+        Country ecuador = new Country(109483, "Ecuador is the closest country to space", "ecuador", 17370000, "Quito", "Spanish",
                 "Ecuador is located in the western corner at the top of the South American continent. Ecuador is named after the Equator, the imaginary " +
                         "line around the Earth that splits the country in two. Most of the country is in the Southern Hemisphere.");
 
@@ -319,13 +319,12 @@ public class DoTheStuff {
                 782722, "Georgetown", "English", "Guyana is in the north-east of South America. Guyana has a low-lying, narrow coastal belt, hilly tropical forest and high savannah uplands.");
 
         Country paraguay = new Country(157048, "Though surrounded on all sides by land, Paraguay not only has a navy, but it has the largest one out of all countries without a coastline.", "Paraguay",
-                7045000, "Asunción", "Spanish", "Paraguay is a country in South America." +
+                7045000, "Asunción", "Spanish and Guaraní", "Paraguay is a country in South America." +
                 " The government system is a presidential republic; the chief of state and head of government is the president.");
 
         Country peru = new Country(496200, "Three-quarters of the world's alpaca population lives in Peru. The national animal is the vicuña, a small camelid similar to the alpaca.", "Peru", 32510000,
                 "Lima", "Aymara", "Peru is the third largest country in South America, after Brazil and Argentina. Along Peru's west coast is a narrow strip of desert 1,555 miles (2,500 kilometers) long." +
                 "Ancient people, called the Chimú and the Nasca, first inhabited this region thousands of years ago. ");
-        //Hopefully this fixes things
 
     }
 }
