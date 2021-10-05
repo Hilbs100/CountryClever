@@ -57,6 +57,7 @@ public class Country {
         this.capital = c.capital;
         this.language = c.language;
         this.description = c.description;
+        continent = c.continent;
     }
 
     // Accessor Methods
