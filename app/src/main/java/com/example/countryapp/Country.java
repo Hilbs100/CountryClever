@@ -19,6 +19,7 @@ public class Country {
     private final String capital;
     private final String language;
     private final String description;
+    private final String continent;
     private MultipleChoice landMassMC;
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
@@ -36,7 +37,7 @@ public class Country {
 
     // Constructor Method
     public Country(int landMass, String funFact1, String countryName, int population,
-    String capital, String language, String description) {
+    String capital, String language, String description, String continent) {
         this.landMass = landMass;
         this.funFact1 = funFact1;
         this.countryName = countryName;
@@ -45,6 +46,7 @@ public class Country {
         this.language = language;
         this.description = description;
         this.used = false;
+        this.continent = continent;
         countryList.add(this);
     }
     public Country(Country c) {
@@ -76,6 +78,7 @@ public class Country {
     public String getLanguage() {
         return language;
     }
+    public String getContinent() {return continent;}
     public static int getCountryListSize() {
         return countryList.size();
     }
