@@ -106,7 +106,7 @@ public class Country {
             return countryList.get(index);
         else
             return new Country(0, "none", "none", 0,
-                    "none", "none", "none");
+                    "none", "none", "none", "none");
     }
 
     // Methods for editing the array lists
