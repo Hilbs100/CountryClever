@@ -78,6 +78,18 @@
                 android:layout_height="20dp" />
 
             <TextView
+                android:id="@+id/ContinentAnswer"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
                 android:id="@+id/LandMassAnswer"
                 android:layout_width="390dp"
                 android:layout_height="wrap_content"

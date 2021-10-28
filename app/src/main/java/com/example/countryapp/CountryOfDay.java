@@ -23,6 +23,7 @@ public class CountryOfDay extends AppCompatActivity {
     RadioGroup languageMC;
     RadioGroup populationMC;
     RadioGroup landMassMC;
+    RadioGroup continentMC;
     RadioButton radioButton;
     Country cod;
 
@@ -44,6 +45,7 @@ public class CountryOfDay extends AppCompatActivity {
         languageMC = (RadioGroup) findViewById(R.id.Language);
         landMassMC = (RadioGroup) findViewById(R.id.LandMass);
         populationMC = (RadioGroup) findViewById(R.id.Population);
+        continentMC = (RadioGroup) findViewById(R.id.Continent);
 
         NumberFormat formatting = NumberFormat.getInstance();
 
@@ -68,6 +70,18 @@ public class CountryOfDay extends AppCompatActivity {
         langC.setText("" + cod.getLanguageMC().getChoiceC());
         RadioButton langD = (RadioButton)findViewById(R.id.langD);
         langD.setText("" + cod.getLanguageMC().getChoiceD());
+
+        TextView contQues = (TextView) findViewById(R.id.contQues);
+        contQues.setText("The continent that " + cod.getCountryName() + " is located in is: ");
+        RadioButton contA = (RadioButton)findViewById(R.id.contA);
+        contA.setText("" + cod.getContinentMC().getChoiceA());
+        RadioButton contB = (RadioButton)findViewById(R.id.contB);
+        contB.setText("" + cod.getContinentMC().getChoiceB());
+        RadioButton contC = (RadioButton)findViewById(R.id.contC);
+        contC.setText("" + cod.getContinentMC().getChoiceC());
+        RadioButton contD = (RadioButton)findViewById(R.id.contD);
+        contD.setText("" + cod.getContinentMC().getChoiceD());
+
 
         TextView landQues = (TextView) findViewById(R.id.LMQues);
         landQues.setText("The land mass of " + cod.getCountryName() + " is: ");
@@ -112,6 +126,13 @@ public class CountryOfDay extends AppCompatActivity {
             cod.getLanguageMC().submitAnswer("" + radioButton.getText());
         }
 
+        int continentAnswer = continentMC.getCheckedRadioButtonId();
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + continentAnswer);
+            radioButton = findViewById(continentAnswer);
+            cod.getContinentMC().submitAnswer("" + radioButton.getText());
+        }
+
         int landMassAnswer = landMassMC.getCheckedRadioButtonId();
         if (landMassAnswer != -1) {
             Log.i("MC", "" + landMassAnswer);
@@ -145,6 +166,14 @@ public class CountryOfDay extends AppCompatActivity {
             radioButton = findViewById(languageAnswer);
             cod.getLanguageMC().submitAnswer("" + radioButton.getText());
         }
+
+        int continentAnswer = continentMC.getCheckedRadioButtonId();
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + continentAnswer);
+            radioButton = findViewById(continentAnswer);
+            cod.getContinentMC().submitAnswer("" + radioButton.getText());
+        }
+
 
         int landMassAnswer = landMassMC.getCheckedRadioButtonId();
         if (landMassAnswer != -1) {

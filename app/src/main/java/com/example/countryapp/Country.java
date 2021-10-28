@@ -24,6 +24,7 @@ public class Country {
     private MultipleChoice populationMC;
     private MultipleChoice capitalMC;
     private MultipleChoice languageMC;
+    private MultipleChoice continentMC;
     private static int cYear;
     private static int cMonth;
     private static int cDay;
@@ -37,7 +38,7 @@ public class Country {
 
     // Constructor Method
     public Country(int landMass, String funFact1, String countryName, int population,
-    String capital, String language, String description, String continent) {
+                   String capital, String language, String description, String continent) {
         this.landMass = landMass;
         this.funFact1 = funFact1;
         this.countryName = countryName;
@@ -49,6 +50,7 @@ public class Country {
         this.continent = continent;
         countryList.add(this);
     }
+
     public Country(Country c) {
         this.landMass = c.landMass;
         this.funFact1 = c.funFact1;
@@ -64,22 +66,31 @@ public class Country {
     public int getLandMass() {
         return landMass;
     }
+
     public String getFunFact1() {
         return funFact1;
     }
+
     public int getPopulation() {
         return population;
     }
+
     public String getCountryName() {
         return countryName;
     }
+
     public String getCapital() {
         return capital;
     }
+
     public String getLanguage() {
         return language;
     }
-    public String getContinent() {return continent;}
+
+    public String getContinent() {
+        return continent;
+    }
+
     public static int getCountryListSize() {
         return countryList.size();
     }
@@ -95,6 +106,9 @@ public class Country {
     }
     public MultipleChoice getLanguageMC() {
         return languageMC;
+    }
+    public MultipleChoice getContinentMC() {
+        return continentMC;
     }
     public static Country getCountryOfTheDay()  {return countryOfTheDay; }
     public int getNumCountries() {
@@ -277,6 +291,7 @@ public class Country {
         populationMC = new MultipleChoice("population", 4, this);
         capitalMC = new MultipleChoice("capital", 4, this);
         languageMC = new MultipleChoice("language", 4, this);
+        continentMC = new MultipleChoice("continent", 4, this);
     }
     public String mcIntoString() {
         String out = "Capital: \nChoice A: " + this.getCapitalMC().getChoiceA();

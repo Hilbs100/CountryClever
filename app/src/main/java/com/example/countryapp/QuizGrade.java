@@ -21,6 +21,7 @@ public class QuizGrade extends AppCompatActivity {
         TextView popFeedback = (TextView) findViewById(R.id.PopulationAnswer);
         TextView capFeedback = (TextView) findViewById(R.id.CapitalAnswer);
         TextView langFeedback = (TextView) findViewById(R.id.LanguageAnswer);
+        TextView contFeedback = (TextView) findViewById(R.id.ContinentAnswer);
 
         TextView score = (TextView) findViewById(R.id.grade);
         score.setText("" + MultipleChoice.score() + "%");
@@ -39,6 +40,10 @@ public class QuizGrade extends AppCompatActivity {
         if(!cod.getPopulationMC().getWasCorrect()) {
             popFeedback.setText("The population of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getPopulationMC().getChosenAnswer()
                     + "\nCorrect Answer: " + cod.getPopulationMC().getCorrectChoice());
+        }
+        if(!cod.getContinentMC().getWasCorrect()) {
+            contFeedback.setText("The continent that " + cod.getCountryName() + " is: \nYour Answer: " + cod.getContinentMC().getChosenAnswer()
+                    + "\nCorrect Answer: " + cod.getContinentMC().getCorrectChoice());
         }
         if(!cod.getLanguageMC().getWasCorrect()) {
             langFeedback.setText("The main language of" + cod.getCountryName() + " is: \nYour Answer: " + cod.getLanguageMC().getChosenAnswer()

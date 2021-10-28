@@ -60,7 +60,7 @@ public class MultipleChoice {
     }
     public static double score() {
         Log.i("MC", "" + 100 * (score/4.0));
-        return 100 * (score/4.0);
+        return 100 * (score/5.0);
     }
     /* This method creates all the choices for the Multiple Choice problem
      All if (type.equals("blah")) contain the same basic code in them, so look at the
@@ -197,6 +197,34 @@ public class MultipleChoice {
                 correctChoice = choiceD;
             }
         }
+        if (type.equals("continent")) {
+            a = findOtherCountries(countryIndex, -1, -1, -1);
+            choiceA = "" + Country.getCountry(a).getContinent();
+            b = findOtherCountries(countryIndex, a, -1, -1);
+            choiceB = "" + (Country.getCountry(b).getContinent());
+            if (numAnswers >= 3) {
+                c = findOtherCountries(countryIndex, a, b, -1);
+                choiceC = "" + (Country.getCountry(c).getContinent());
+                if (numAnswers == 4) {
+                    d = findOtherCountries(countryIndex, a, b, c);
+                    choiceD = "" + (Country.getCountry(d).getContinent());
+                }
+            }
+            rand = (int)((Math.random() * numAnswers) + 1);
+            if (rand == 1) {
+                choiceA = "" + country.getContinent();
+                correctChoice = choiceA;
+            } else if (rand == 2) {
+                choiceB = "" + country.getContinent();
+                correctChoice = choiceB;
+            } else if (rand == 3) {
+                choiceC = "" + country.getContinent();
+                correctChoice = choiceC;
+            } else if (rand == 4) {
+                choiceD = "" + country.getContinent();
+                correctChoice = choiceD;
+            }
+        }
     }
     //finds a country of which that value has not been used; refer to createChoices
     public int findOtherCountries(int main, int a, int b, int c) {
@@ -228,6 +256,11 @@ public class MultipleChoice {
                         !(choiceB.equals("" + Country.getCountry(rand).getLanguage())) &&
                         !(choiceC.equals("" + Country.getCountry(rand).getLanguage())) &&
                         !(choiceD.equals("" + Country.getCountry(rand).getLanguage())))
+                    return rand;
+                else if(type.equals("continent") && !(country.getContinent().equals(Country.getCountry(rand).getContinent()))
+                        && !(choiceA.equals("" + Country.getCountry(rand).getContinent())) &&
+                        !(choiceB.equals("" + Country.getCountry(rand).getContinent())) &&
+                        !(choiceC.equals("" + Country.getCountry(rand).getContinent())))
                     return rand;
             }
             rand = (int)(Math.random() * (Country.getCountryListSize() - 1)) + 1;
