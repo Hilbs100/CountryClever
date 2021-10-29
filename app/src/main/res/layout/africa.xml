@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/africa"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="sendROC">
 
     <ImageView
         android:id="@+id/imageView"
@@ -20,9 +21,39 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/doop"
         tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/ROC1"
+        android:layout_width="44dp"
+        android:layout_height="45dp"
+        android:onClick="sendROC"
+        android:text="Button"
+        android:textColor="#0000FFFF"
+        app:backgroundTint="#0000FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003"
+        tools:ignore="onClick,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/ROC2"
+        android:layout_width="67dp"
+        android:layout_height="83dp"
+        android:onClick="sendROC"
+        app:backgroundTint="#0000FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517"
+        tools:ignore="onClick,SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

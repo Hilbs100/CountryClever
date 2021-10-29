@@ -30,6 +30,9 @@ public class GeographyGame {
         Log.i("Country Selected", goalCountry);
         usedCountries.add(unusedCountries.remove(rand));
     }
+    public String getGoalCountry() {
+        return goalCountry;
+    }
     public boolean pick(String country) {
         if (country.equals(goalCountry)) {
             findNewCountry();
@@ -41,6 +44,7 @@ public class GeographyGame {
         return false;
 
     }
+
     public static void addMap(GeographyGame map) {
         maps.add(map);
     }

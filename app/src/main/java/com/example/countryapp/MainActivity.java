@@ -130,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
     }
     @SuppressLint("ResourceType")
     public void goToAfrica(View v) {
-        setContentView(R.layout.africa);
+        Intent intent = new Intent(this, Africa_Map.class);
+        startActivity(intent);
     }
     @SuppressLint("ResourceType")
     public void goToEurope(View v) {
@@ -140,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("GeoGame Home", "To World Map");
         setContentView(R.layout.world_map_game);
     }
+
 
 
 }
