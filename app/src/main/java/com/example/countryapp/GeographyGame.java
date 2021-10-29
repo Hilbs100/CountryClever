@@ -9,6 +9,7 @@ public class GeographyGame {
     private ArrayList<String> countries = new ArrayList<String>();
     private ArrayList<String> usedCountries = new ArrayList<String>();
     private ArrayList<String> unusedCountries = new ArrayList<String>();
+    private int score = 0;
     private String goalCountry;
     public GeographyGame() {
         countries = new ArrayList<String>();
@@ -26,9 +27,14 @@ public class GeographyGame {
     }
     public void findNewCountry() {
         int rand = (int)(Math.random() * unusedCountries.size());
-        goalCountry = unusedCountries.get(rand);
+        if (unusedCountries.size() > 0) {
+            goalCountry = unusedCountries.get(rand);
+            usedCountries.add(unusedCountries.remove(rand));
+        }
+        else {
+            goalCountry = "Nothing, you're Finished!";
+        }
         Log.i("Country Selected", goalCountry);
-        usedCountries.add(unusedCountries.remove(rand));
     }
     public String getGoalCountry() {
         return goalCountry;
@@ -43,6 +49,9 @@ public class GeographyGame {
         Log.i("Geography Game", "false");
         return false;
 
+    }
+    public double returnScore() {
+        return ((score + 0.0)/(countries.size())) * 100;
     }
 
     public static void addMap(GeographyGame map) {

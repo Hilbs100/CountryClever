@@ -5,7 +5,8 @@
     android:id="@+id/africa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="sendROC">
+    android:onClick="sendROC"
+    app:barrierMargin="0dp">
 
     <ImageView
         android:id="@+id/imageView"
@@ -31,6 +32,7 @@
         android:id="@+id/ROC1"
         android:layout_width="44dp"
         android:layout_height="45dp"
+        android:background="#0000FFFF"
         android:onClick="sendROC"
         android:text="Button"
         android:textColor="#0000FFFF"
@@ -47,13 +49,35 @@
         android:id="@+id/ROC2"
         android:layout_width="67dp"
         android:layout_height="83dp"
+        android:background="#0000FFFF"
+        android:lineSpacingExtra="0sp"
         android:onClick="sendROC"
+        android:shadowColor="#0000FFFF"
         app:backgroundTint="#0000FFFF"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
+        app:iconTint="#0000FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517"
+        app:layout_constraintVertical_bias="0.532"
+        app:rippleColor="#0000FFFF"
+        app:strokeColor="#0000FFFF"
+        app:strokeWidth="0dp"
         tools:ignore="onClick,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/AfricaText"
+        android:layout_width="380dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
