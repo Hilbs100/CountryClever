@@ -91,6 +91,8 @@ public class Country {
         return continent;
     }
 
+    public String getDescription() {return description; }
+
     public static int getCountryListSize() {
         return countryList.size();
     }
