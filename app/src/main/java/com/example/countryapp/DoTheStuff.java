@@ -264,7 +264,7 @@ public class DoTheStuff {
                 "Ukraine is the second largest country in Europe, and is known for its ancient structures.", "Europe");
 
         Country poland = new Country(120726, "Poland has Europe's  oldest restaurant, which has been open since 1275", "Poland", 37970000, "Warsaw", "Polish",
-                "Poland is known for its rich historical sites, including sites from world war 2, and the cold war", "Europe");
+                "Poland is a country in eastern Europe bordered by Czechia and Slovakia to the Southeast, Belarus to the East, Lithuania to the Northeast, and the Baltic Sea and Russia to the North. Poland is known for its rich historical sites, including sites from world war 2, and the cold war. Poland is also home to the primeval Białowieża forest.", "Europe");
 
         Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill", "Romania", 19410000, "Madrid", "Spanish",
                 "Romania is known for its natural beauty, and its medieval fortresses", "Europe");
@@ -328,15 +328,15 @@ public class DoTheStuff {
 
         // Asia
         Country china = new Country(3705000, "Other than India, China has the largest population on Earth!", "China", 1402000000, "Beijing", "Mandarin", "China is one of the largest countries in the world by both land mass and population, and" +
-                "they are one of the oldest civilizations in the world, having been founded nearly 5,000 years ago", "Asia");
+                "they are one of the oldest civilizations in the world, having been founded nearly 5,000 years ago! National symbols of China include the Giant Panda and the Great Wall of China. The compass was invented in China. China is also home to the world's largest hydroelectric power plant, the Three Gorges Dam, which straddles the Yangtze River.", "Asia");
 
         // North America
         Country canada = new Country(3855000, "The longest highway in the world can be found in Canada, with the Trans-Canada Highway spanning 4,860 miles", "Canada", 38010000, "Ottawa", "English", "Canada is the northernmost country in North American and one of the largest countries in the world. Because it" +
-                "has been owned by both the French and British in its history, its two main languages are English and French", "North America");
+                "has been owned by both the French and British in its history, its two main languages are English and French. Canada is the second-largest country by landmass in the world,and only has one land border with another country, the United States of America.", "North America");
 
         // Oceania
         Country australia = new Country(2970000, "The Great Barrier Reefs, off the coast of Australia, is the largest eco-system in the world!", "Australia", 25690000, "Canberra", "English", "Australia is located in the Southern Hemisphere in the Pacific Ocean. It is known for its beautiful coastline and harsh outback" +
-                "and attracts a large amount of tourists each year.", "Oceania");
+                "and attracts a large amount of tourists each year. Iconic symbols of Australia include Kangaroos, Koalas, and Emus", "Oceania");
 
         //Hopefully this fixes things
 
