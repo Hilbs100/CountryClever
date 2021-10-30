@@ -38,10 +38,65 @@ public class SouthAmerica_Map extends AppCompatActivity {
         Log.i("Geography Game", "Argentina picked");
     }
 
+    public void sendChile(View v){
+        southAmerica.pick("Chile");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Chile picked");
+    }
 
+    public void sendPeru(View v){
+        southAmerica.pick("Peru");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Peru picked");
+    }
 
+    public void sendBolivia(View v){
+        southAmerica.pick("Bolivia");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Bolivia picked");
+    }
 
+    public void sendUruguay(View v){
+        southAmerica.pick("Uruguay");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Uruguay picked");
+    }
 
+    public void sendParaguay(View v){
+        southAmerica.pick("Paraguay");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Paraguay picked");
+    }
+
+    public void sendEcuador(View v){
+        southAmerica.pick("Ecuador");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Ecuador picked");
+    }
+
+    public void sendColombia(View v){
+        southAmerica.pick("Colombia");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Colombia picked");
+    }
+
+    public void sendVenezuela(View v){
+        southAmerica.pick("Venezuela");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Venezuela picked");
+    }
+
+    public void sendGuyana(View v){
+        southAmerica.pick("Guyana");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Guyana picked");
+    }
+
+    public void sendSuriname(View v){
+        southAmerica.pick("Suriname");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Suriname picked");
+    }
 }
 
 
