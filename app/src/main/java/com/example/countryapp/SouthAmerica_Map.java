@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SouthAmerica_Map extends AppCompatActivity {
+
     GeographyGame southAmerica = GeographyGame.getMap(4);
     TextView goalCountryText;
     @Override
@@ -24,6 +25,19 @@ public class SouthAmerica_Map extends AppCompatActivity {
         Intent intent = new Intent(this, world_Map.class);
         startActivity(intent);
     }
+
+    public void sendBrazil(View v){
+        southAmerica.pick("Brazil");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Brazil picked");
+    }
+
+    public void sendArgentina(View v){
+        southAmerica.pick("Argentina");
+        goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
+        Log.i("Geography Game", "Argentina picked");
+    }
+
 
 
 
