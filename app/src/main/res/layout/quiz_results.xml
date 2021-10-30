@@ -108,7 +108,16 @@
                 android:layout_gravity="center_horizontal"
                 android:textColor="#000000"
                 android:textSize="18sp" />
+
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollAnswers"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,6 +53,19 @@ public class QuizGrade extends AppCompatActivity {
             capFeedback.setText("The capital of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getCapitalMC().getChosenAnswer()
                     + "\nCorrect Answer: " + cod.getCapitalMC().getCorrectChoice());
         }
+
+        TextView descrip = (TextView) findViewById(R.id.description);
+        String description = cod.getDescription();
+        int landma = cod.getLandMass();
+        int population = cod.getPopulation();
+        String lang = cod.getLanguage();
+        String capital = cod.getCapital();
+        String continent = cod.getContinent();
+        String funFacts = cod.getFunFact1();
+        descrip.setText("" + description + "\nLandmass: " + landma + "\nPopulation: " + population + "\nLanguage: " + lang + "\nCapital: " + capital + "\nContinent: " + continent + "\nDid you know?\n" + funFacts);
+
+
+
     }
     public void goHome(View v) {
         Intent intent = new Intent(this, MainActivity.class);
