@@ -28,6 +28,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="56dp"
         android:background="#DC0D0D"
+        android:onClick="toGeoGame"
         android:text="Geography Game"
         app:backgroundTint="#C81010"
         app:layout_constraintBottom_toBottomOf="parent"

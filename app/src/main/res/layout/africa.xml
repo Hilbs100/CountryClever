@@ -8,6 +8,18 @@
     android:onClick="sendROC"
     app:barrierMargin="0dp">
 
+    <Button
+        android:id="@+id/africaBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="africaBack"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="416dp"

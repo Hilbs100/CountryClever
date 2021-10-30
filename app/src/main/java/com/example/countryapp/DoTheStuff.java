@@ -264,19 +264,20 @@ public class DoTheStuff {
                 "Ukraine is the second largest country in Europe, and is known for its ancient structures.", "Europe");
 
         Country poland = new Country(120726, "Poland has Europe's  oldest restaurant, which has been open since 1275", "Poland", 37970000, "Warsaw", "Polish",
-                "Poland is a country in eastern Europe bordered by Czechia and Slovakia to the Southeast, Belarus to the East, Lithuania to the Northeast, and the Baltic Sea and Russia to the North. Poland is known for its rich historical sites, including sites from world war 2, and the cold war. Poland is also home to the primeval Białowieża forest.", "Europe");
+                "Poland is a country in eastern Europe bordered by Czechia and Slovakia to the Southeast, Belarus to the East, Lithuania to the Northeast, and the Baltic Sea and Russia to the North. " +
+                        "Poland is known for its rich historical sites, including sites from world war 2, and the cold war. Poland is also home to the primeval Białowieża forest.", "Europe");
 
         Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill", "Romania", 19410000, "Madrid", "Spanish",
-                "Romania is known for its natural beauty, and its medieval fortresses", "Europe");
+                "Romania is known for its natural beauty, and its medieval fortresses.", "Europe");
 
         Country netherlands = new Country(16040, "The Netherlands accounts for 90 percent of the worlds tulip farms", "The Netherlands", 17280000, "Amsterdam", "Dutch",
-                "The Netherlands are known for their huge tulip farms, and the city of Amsterdam", "Europe");
+                "The Netherlands are known for their huge tulip farms, and the city of Amsterdam.", "Europe");
 
         Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
-                "Belgium is best known for its food.  It is also the the headquarters for NATO and the UN", "Europe");
+                "Belgium is best known for its food.  It is also the the headquarters for NATO and the UN.", "Europe");
 
         Country CzechRepublic  = new Country(30452, "The Czech Republic has over 2000 castles", "The Czech Republic", 10650000, "Prague", "Czech",
-                "The Czech Republic, also known as Czechia, is one of the safest countries in the world, and has some of the biggest, and oldest countries in the world", "Europe");
+                "The Czech Republic, also known as Czechia, is one of the safest countries in the world, and has some of the biggest, and oldest countries in the world.", "Europe");
 
         Country greece = new Country(50949, "The Official name of Greece, is 'the Hellenic Republic'", "Greece", 10720000, "Athens", "Greek",
                 "Greece is known for its beaches, scenery, and ancient architecture", "Europe");

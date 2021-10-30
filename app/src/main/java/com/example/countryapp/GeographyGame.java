@@ -25,7 +25,7 @@ public class GeographyGame {
     public void start() {
         findNewCountry();
     }
-    public void findNewCountry() {
+    private void findNewCountry() {
         int rand = (int)(Math.random() * unusedCountries.size());
         if (unusedCountries.size() > 0) {
             goalCountry = unusedCountries.get(rand);
@@ -48,6 +48,19 @@ public class GeographyGame {
         findNewCountry();
         Log.i("Geography Game", "false");
         return false;
+
+    }
+    public void reset() {
+        while(usedCountries.size() > 0) {
+            usedCountries.remove(0);
+        }
+        while(unusedCountries.size() > 0) {
+            unusedCountries.remove(0);
+        }
+        for (int i = 0; i < countries.size(); i++) {
+            unusedCountries.add(countries.get(i));
+        }
+        score = 0;
 
     }
     public double returnScore() {

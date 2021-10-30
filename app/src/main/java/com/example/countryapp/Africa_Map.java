@@ -1,5 +1,6 @@
 package com.example.countryapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,9 +16,15 @@ public class Africa_Map extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.africa);
-        GeographyGame.getMap(2).start();
+        africa.start();
         goalCountryText = (TextView) findViewById(R.id.AfricaText);
         goalCountryText.setText("Find: " + africa.getGoalCountry());
+    }
+
+    public void africaBack(View v) {
+        africa.reset();
+        Intent intent = new Intent(this, world_Map.class);
+        startActivity(intent);
     }
 
     public void sendROC(View v) {
