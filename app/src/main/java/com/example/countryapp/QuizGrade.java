@@ -35,29 +35,39 @@ public class QuizGrade extends AppCompatActivity {
         Country cod = Country.getCountryOfTheDay();
         if(!cod.getLandMassMC().getWasCorrect()) {
             lMFeedback.setText("The land mass of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getLandMassMC().getChosenAnswer()
-                    + "\nCorrect Answer: " + cod.getLandMassMC().getCorrectChoice());
+                    + "\nCorrect Answer: " + cod.getLandMassMC().getCorrectChoice() + "\n");
         }
+        else
+            lMFeedback.setVisibility(View.GONE);
         if(!cod.getPopulationMC().getWasCorrect()) {
             popFeedback.setText("The population of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getPopulationMC().getChosenAnswer()
-                    + "\nCorrect Answer: " + cod.getPopulationMC().getCorrectChoice());
+                    + "\nCorrect Answer: " + cod.getPopulationMC().getCorrectChoice() + "\n");
         }
+        else
+            popFeedback.setVisibility(View.GONE);
         if(!cod.getContinentMC().getWasCorrect()) {
             contFeedback.setText("The continent that " + cod.getCountryName() + " is: \nYour Answer: " + cod.getContinentMC().getChosenAnswer()
-                    + "\nCorrect Answer: " + cod.getContinentMC().getCorrectChoice());
+                    + "\nCorrect Answer: " + cod.getContinentMC().getCorrectChoice() + "\n");
         }
+        else
+            contFeedback.setVisibility(View.GONE);
         if(!cod.getLanguageMC().getWasCorrect()) {
             langFeedback.setText("The main language of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getLanguageMC().getChosenAnswer()
-                    + "\nCorrect Answer: " + cod.getLanguageMC().getCorrectChoice());
+                    + "\nCorrect Answer: " + cod.getLanguageMC().getCorrectChoice() + "\n");
         }
+        else
+            langFeedback.setVisibility(View.GONE);
         if(!cod.getCapitalMC().getWasCorrect()) {
             capFeedback.setText("The capital of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getCapitalMC().getChosenAnswer()
-                    + "\nCorrect Answer: " + cod.getCapitalMC().getCorrectChoice());
+                    + "\nCorrect Answer: " + cod.getCapitalMC().getCorrectChoice() + "\n");
         }
+        else
+            capFeedback.setVisibility(View.GONE);
 
         TextView descrip = (TextView) findViewById(R.id.description);
         String description = cod.getDescription();
         String funFacts = cod.getFunFact1();
-        descrip.setText( description + "\n\nDid you know?\n" + funFacts);
+        descrip.setText( description + "\n\nDid you know?\n" + funFacts + "\n");
 
 
 
