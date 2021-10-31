@@ -270,8 +270,8 @@ public class DoTheStuff {
         Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill.", "Romania", 19290000, "Bucharest", "Romanian",
                 "Romania is known for its natural beauty, and its medieval fortresses.", "Europe");
 
-        Country netherlands = new Country(16040, "The Netherlands accounts for 90 percent of the worlds tulip farms", "The Netherlands", 17280000, "Amsterdam", "Dutch",
-                "The Netherlands are known for their huge tulip farms, and the city of Amsterdam.", "Europe");
+        Country netherlands = new Country(16040, "Holland is part of the Netherlands", "The Netherlands", 17280000, "Amsterdam", "Dutch",
+                "The Netherlands are known for their huge tulip farms, accounting for 90 percent of the world's tulip farms, and the city of Amsterdam. The Netherlands were also the home of Vincent van Gogh. A huge canal system and flood control system runs through the Netherlands as well, and windmills can be found throughout the countryside.", "Europe");
 
         Country belgium = new Country(11849, "The Zaventem airport in Brussels sells 1.6 kilograms of chocolate per minute", "Belgium", 11460000, "Brussels", "Dutch",
                 "Belgium is best known for its food.  It is also the the headquarters for NATO and the UN.", "Europe");
