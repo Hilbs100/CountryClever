@@ -7,48 +7,38 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:ignore="ExtraText">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="835dp"
-        android:layout_height="1379dp"
-        android:contentDescription="@string/hello_first_fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/black_wallpaper" />
-
     <Button
         android:id="@+id/beginButton"
-        android:layout_width="161dp"
-        android:layout_height="94dp"
+        android:layout_width="160dp"
+        android:layout_height="110dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginBottom="56dp"
-        android:background="#DC0D0D"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="48dp"
         android:onClick="toGeoGame"
         android:text="Geography Game"
         app:backgroundTint="#C81010"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/country_of_day_button"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#FFFFFF" />
 
     <Button
         android:id="@+id/country_of_day_button"
-        android:layout_width="157dp"
-        android:layout_height="109dp"
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="48dp"
-        android:text="@string/country_of_the_day"
         android:onClick="openCOD"
+        android:text="@string/country_of_the_day"
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/beginButton"
         tools:ignore="OnClick" />
     <!--removed the onClick attribute because it was causing errors -->
 
@@ -56,7 +46,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
@@ -79,7 +69,7 @@
         android:ellipsize="middle"
         android:gravity="center_horizontal"
         android:text="Learn about the Country of the Day or test your knowledge in our Geography Game!"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

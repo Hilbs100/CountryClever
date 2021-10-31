@@ -16,7 +16,7 @@ public class SAresults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sa_results);
         TextView results = (TextView) findViewById(R.id.saScore);
-        results.setText("" + southAmerica.returnFormattedScore());
+        results.setText("" + southAmerica.returnFormattedScore() + "%");
         if (southAmerica.returnScore() >= 85.0)
             results.setTextColor(Color.GREEN);
         else if(southAmerica.returnScore() <= 30.0) {

@@ -48,7 +48,9 @@ public class GeographyGame {
             findNewCountry();
             return true;
         }
-        WrongAnswers WA = new WrongAnswers(country, goalCountry);
+        if (!goalCountry.equals("Nothing, you're Finished!")) {
+            WrongAnswers WA = new WrongAnswers(country, goalCountry);
+        }
         Log.i("Geography Game", "false");
         findNewCountry();
         return false;

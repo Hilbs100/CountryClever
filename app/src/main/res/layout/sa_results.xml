@@ -54,6 +54,19 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Incorrect Answers: "
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
                 android:id="@+id/incAnswers"
                 android:layout_width="390dp"
                 android:layout_height="wrap_content"
