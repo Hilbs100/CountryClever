@@ -40,9 +40,7 @@ public class CountryOfDay extends AppCompatActivity {
         String headerText = cod.getCountryName();
         header.setText("" + headerText);
         Country.getCountryOfTheDay().populate();
-        TextView descrip = (TextView) findViewById(R.id.description);
-        String description = cod.getDescription();
-        descrip.setText("" + description);
+
 
 
         capitalMC = (RadioGroup) findViewById(R.id.Capital);

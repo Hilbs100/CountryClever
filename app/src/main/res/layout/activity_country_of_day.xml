@@ -50,12 +50,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
 
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:text="TextView" />
-
             <RadioGroup
                 android:id="@+id/Capital"
                 android:layout_width="394dp"

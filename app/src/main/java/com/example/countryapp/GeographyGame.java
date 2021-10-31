@@ -2,6 +2,7 @@ package com.example.countryapp;
 
 import android.util.Log;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class GeographyGame {
@@ -23,6 +24,7 @@ public class GeographyGame {
         }
     }
     public void start() {
+        reset();
         findNewCountry();
     }
     private void findNewCountry() {
@@ -41,16 +43,19 @@ public class GeographyGame {
     }
     public boolean pick(String country) {
         if (country.equals(goalCountry)) {
-            findNewCountry();
             Log.i("Geography Game", "true");
+            score++;
+            findNewCountry();
             return true;
         }
-        findNewCountry();
+        WrongAnswers WA = new WrongAnswers(country, goalCountry);
         Log.i("Geography Game", "false");
+        findNewCountry();
         return false;
 
     }
     public void reset() {
+        WrongAnswers.resetAnswers();
         while(usedCountries.size() > 0) {
             usedCountries.remove(0);
         }
@@ -65,6 +70,10 @@ public class GeographyGame {
     }
     public double returnScore() {
         return ((score + 0.0)/(countries.size())) * 100;
+    }
+    public String returnFormattedScore() {
+        DecimalFormat fmt = new DecimalFormat("#.##");
+        return fmt.format(returnScore());
     }
 
     public static void addMap(GeographyGame map) {

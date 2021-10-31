@@ -56,14 +56,8 @@ public class QuizGrade extends AppCompatActivity {
 
         TextView descrip = (TextView) findViewById(R.id.description);
         String description = cod.getDescription();
-        String name = cod.getCountryName();
-        int landma = cod.getLandMass();
-        int population = cod.getPopulation();
-        String lang = cod.getLanguage();
-        String capital = cod.getCapital();
-        String continent = cod.getContinent();
         String funFacts = cod.getFunFact1();
-        descrip.setText("\n\n" + name + "\n\n" + description + "\n\nLandmass: " + landma + "\n\nPopulation: " + population + "\n\nLanguage: " + lang + "\n\nCapital: " + capital + "\n\nContinent: " + continent + "\n\nDid you know?" + funFacts);
+        descrip.setText( description + "\n\nDid you know?\n" + funFacts);
 
 
 

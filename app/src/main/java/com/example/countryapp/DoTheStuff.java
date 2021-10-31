@@ -267,7 +267,7 @@ public class DoTheStuff {
                 "Poland is a country in eastern Europe bordered by Czechia and Slovakia to the Southeast, Belarus to the East, Lithuania to the Northeast, and the Baltic Sea and Russia to the North. " +
                         "Poland is known for its rich historical sites, including sites from world war 2, and the cold war. Poland is also home to the primeval Białowieża forest.", "Europe");
 
-        Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill", "Romania", 19410000, "Madrid", "Spanish",
+        Country romania = new Country(92046, "Romania's parliament building has a 6 million dollar annual heating bill.", "Romania", 19290000, "Bucharest", "Romanian",
                 "Romania is known for its natural beauty, and its medieval fortresses.", "Europe");
 
         Country netherlands = new Country(16040, "The Netherlands accounts for 90 percent of the worlds tulip farms", "The Netherlands", 17280000, "Amsterdam", "Dutch",

@@ -318,8 +318,25 @@
 
     <Button
         android:id="@+id/Suriname"
-        android:layout_width="22dp"
-        android:layout_height="20dp"
+        android:layout_width="24dp"
+        android:layout_height="12dp"
+        android:background="#0000FFFF"
+        android:onClick="sendSuriname"
+        android:text="Button"
+        android:textColor="#0000FFFF"
+        app:backgroundTint="#0000FFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276"
+        tools:ignore="onClick,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/French"
+        android:layout_width="23dp"
+        android:layout_height="12dp"
         android:background="#0000FFFF"
         android:onClick="sendSuriname"
         android:text="Button"
@@ -334,20 +351,15 @@
         tools:ignore="onClick,TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/French"
-        android:layout_width="22dp"
-        android:layout_height="20dp"
-        android:background="#0000FFFF"
-        android:onClick="sendSuriname"
-        android:text="Button"
-        android:textColor="#0000FFFF"
-        app:backgroundTint="#0000FFFF"
+        android:id="@+id/finishSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="toSAScore"
+        android:text="Finish"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
-        tools:ignore="onClick,TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
