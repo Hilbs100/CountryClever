@@ -116,7 +116,8 @@
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="181dp"
+                android:layout_height="194dp"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/country_description"
                 android:textColor="#000000"
                 android:textSize="16sp" />

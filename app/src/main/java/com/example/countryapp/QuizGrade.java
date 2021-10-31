@@ -46,7 +46,7 @@ public class QuizGrade extends AppCompatActivity {
                     + "\nCorrect Answer: " + cod.getContinentMC().getCorrectChoice());
         }
         if(!cod.getLanguageMC().getWasCorrect()) {
-            langFeedback.setText("The main language of" + cod.getCountryName() + " is: \nYour Answer: " + cod.getLanguageMC().getChosenAnswer()
+            langFeedback.setText("The main language of " + cod.getCountryName() + " is: \nYour Answer: " + cod.getLanguageMC().getChosenAnswer()
                     + "\nCorrect Answer: " + cod.getLanguageMC().getCorrectChoice());
         }
         if(!cod.getCapitalMC().getWasCorrect()) {
@@ -63,7 +63,7 @@ public class QuizGrade extends AppCompatActivity {
         String capital = cod.getCapital();
         String continent = cod.getContinent();
         String funFacts = cod.getFunFact1();
-        descrip.setText("\n" + name + "\n" + description + "\nLandmass: " + landma + "\nPopulation: " + population + "\nLanguage: " + lang + "\nCapital: " + capital + "\nContinent: " + continent + "\nDid you know?\n" + funFacts);
+        descrip.setText("\n\n" + name + "\n\n" + description + "\n\nLandmass: " + landma + "\n\nPopulation: " + population + "\n\nLanguage: " + lang + "\n\nCapital: " + capital + "\n\nContinent: " + continent + "\n\nDid you know?" + funFacts);
 
 
 
