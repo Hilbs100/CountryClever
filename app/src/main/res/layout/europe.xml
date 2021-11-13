@@ -8,15 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="389dp"
-        android:layout_height="574dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="91"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/europegang" />
+        app:srcCompat="@drawable/europe" />
 </androidx.constraintlayout.widget.ConstraintLayout>
