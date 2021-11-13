@@ -36,8 +36,7 @@ public class world_Map extends AppCompatActivity {
         setContentView(R.layout.oceania);
     }
     @SuppressLint("ResourceType")
-    public void goToAsia(View v) {
-        setContentView(R.layout.asia);
+    public void goToAsia(View v) { setContentView(R.layout.asia);
     }
     @SuppressLint("ResourceType")
     public void goToAfrica(View v) {
