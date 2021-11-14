@@ -23,7 +23,8 @@ public class world_Map extends AppCompatActivity {
     }
     @SuppressLint("ResourceType")
     public void goToNA(View v) {
-        setContentView(R.layout.north_america);
+        Intent intent = new Intent(this, NA_Map.class);
+        startActivity(intent);
     }
     @SuppressLint("ResourceType")
     public void goToSA(View v) {
@@ -36,7 +37,9 @@ public class world_Map extends AppCompatActivity {
         setContentView(R.layout.oceania);
     }
     @SuppressLint("ResourceType")
-    public void goToAsia(View v) { setContentView(R.layout.asia);
+    public void goToAsia(View v) {
+        Intent intent = new Intent(this, Asia_Map.class);
+        startActivity(intent);
     }
     @SuppressLint("ResourceType")
     public void goToAfrica(View v) {

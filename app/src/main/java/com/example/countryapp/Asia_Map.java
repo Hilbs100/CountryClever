@@ -21,7 +21,7 @@ public class Asia_Map extends AppCompatActivity {
         setContentView(R.layout.asia);
         finish = (Button) findViewById(R.id.finishAsia);
         asia.start();
-        goalCountryText = (TextView) findViewById(R.id.southAmericaText);
+        goalCountryText = (TextView) findViewById(R.id.asiaText);
         goalCountryText.setText("Find: " + asia.getGoalCountry());
         finish.setVisibility(View.INVISIBLE);
     }
