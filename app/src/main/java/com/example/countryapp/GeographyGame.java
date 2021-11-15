@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.muddzdev.styleabletoastlibrary.StyleableToast;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
@@ -54,7 +56,7 @@ public class GeographyGame {
     public boolean pick(String country) {
         if (country.equals(goalCountry)) {
             Log.i("Geography Game", "true");
-            currentToast.makeText(context, "correct", Toast.LENGTH_SHORT).show();
+            StyleableToast.makeText(context, "correct", Toast.LENGTH_SHORT, R.style.toast).show();
             score++;
             findNewCountry();
             return true;
@@ -64,7 +66,7 @@ public class GeographyGame {
         }
         Log.i("Geography Game", "false");
         findNewCountry();
-        currentToast.makeText(context, "incorrect", Toast.LENGTH_SHORT).show();
+        StyleableToast.makeText(context, "incorrect", Toast.LENGTH_SHORT, R.style.toast).show();
         return false;
 
     }
