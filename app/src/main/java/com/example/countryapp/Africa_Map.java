@@ -6,11 +6,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Africa_Map extends AppCompatActivity {
 
+    Toast africaToast;
     GeographyGame africa = GeographyGame.getMap(2);
     Button finish;
     TextView goalCountryText;
@@ -19,6 +21,9 @@ public class Africa_Map extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.africa);
         finish = (Button) findViewById(R.id.africaFinish);
+        africaToast = new Toast(this);
+        africaToast.makeText(Africa_Map.this, "hello", Toast.LENGTH_SHORT);
+        GeographyGame.setToast(Africa_Map.this);
         africa.start();
         goalCountryText = (TextView) findViewById(R.id.AfricaText);
         goalCountryText.setText("Find: " + africa.getGoalCountry());
@@ -175,6 +180,31 @@ public class Africa_Map extends AppCompatActivity {
         }
         Log.i("Geography Game", "Botswana picked");
     }
+    public void sendSouthAfrica(View v) {
+        africa.pick("South Africa");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "South Africa picked");
+    }
+    public void sendNamibia(View v) {
+        africa.pick("Namibia");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Namibia picked");
+    }
+    public void sendAngola(View v) {
+        africa.pick("Angola");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Angola picked");
+    }
+
 
 
 

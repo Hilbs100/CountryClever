@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +21,7 @@ public class Asia_Map extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.asia);
         finish = (Button) findViewById(R.id.finishAsia);
+        GeographyGame.setToast(Asia_Map.this);
         asia.start();
         goalCountryText = (TextView) findViewById(R.id.asiaText);
         goalCountryText.setText("Find: " + asia.getGoalCountry());

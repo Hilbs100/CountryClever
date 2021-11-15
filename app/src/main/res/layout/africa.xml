@@ -291,6 +291,101 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
+        android:id="@+id/southafrica"
+        android:layout_width="64dp"
+        android:layout_height="37dp"
+        android:background="#0000"
+        android:onClick="sendSouthAfrica"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/namibia"
+        android:layout_width="36dp"
+        android:layout_height="61dp"
+        android:background="#0000"
+        android:onClick="sendNamibia"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/angola"
+        android:layout_width="49dp"
+        android:layout_height="51dp"
+        android:background="#0000"
+        android:onClick="sendNamibia"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.613"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/angola2"
+        android:layout_width="27dp"
+        android:layout_height="20dp"
+        android:background="#0000"
+        android:onClick="sendAngola"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/southafrica2"
+        android:layout_width="64dp"
+        android:layout_height="37dp"
+        android:background="#0000"
+        android:onClick="sendSouthAfrica"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/southafrica3"
+        android:layout_width="15dp"
+        android:layout_height="17dp"
+        android:background="#0000"
+        android:onClick="sendSouthAfrica"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
         android:id="@+id/zimbabwe"
         android:layout_width="29dp"
         android:layout_height="29dp"

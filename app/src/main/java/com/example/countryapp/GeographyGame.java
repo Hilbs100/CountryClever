@@ -1,11 +1,15 @@
 package com.example.countryapp;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class GeographyGame {
+    private static Context context;
+    private static Toast currentToast;
     private static ArrayList<GeographyGame> maps = new ArrayList<GeographyGame>();
     private ArrayList<String> countries = new ArrayList<String>();
     private ArrayList<String> usedCountries = new ArrayList<String>();
@@ -38,12 +42,19 @@ public class GeographyGame {
         }
         Log.i("Country Selected", goalCountry);
     }
+    public static void setToast(Context context) {
+        GeographyGame.context = context;
+        currentToast = new Toast(context);
+        currentToast.makeText(context, "", Toast.LENGTH_SHORT);
+    }
+
     public String getGoalCountry() {
         return goalCountry;
     }
     public boolean pick(String country) {
         if (country.equals(goalCountry)) {
             Log.i("Geography Game", "true");
+            currentToast.makeText(context, "correct", Toast.LENGTH_SHORT).show();
             score++;
             findNewCountry();
             return true;
@@ -53,6 +64,7 @@ public class GeographyGame {
         }
         Log.i("Geography Game", "false");
         findNewCountry();
+        currentToast.makeText(context, "incorrect", Toast.LENGTH_SHORT).show();
         return false;
 
     }

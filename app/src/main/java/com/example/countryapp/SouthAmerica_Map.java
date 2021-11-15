@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,7 @@ public class SouthAmerica_Map extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.south_america);
         finish = (Button) findViewById(R.id.finishSA);
+        GeographyGame.setToast(SouthAmerica_Map.this);
         southAmerica.start();
         goalCountryText = (TextView) findViewById(R.id.southAmericaText);
         goalCountryText.setText("Find: " + southAmerica.getGoalCountry());
