@@ -65,7 +65,7 @@ public class GeographyGame {
         currentToast.cancel();
         if (country.equals(goalCountry)) {
             Log.i("Geography Game", "true");
-            currentToast = StyleableToast.makeText(context, "correct", Toast.LENGTH_SHORT, R.style.toast);
+            currentToast = StyleableToast.makeText(context, "Correct", Toast.LENGTH_SHORT, R.style.toast);
             currentToast.show();
             score++;
             findNewCountry();
@@ -76,7 +76,7 @@ public class GeographyGame {
         }
         Log.i("Geography Game", "false");
         findNewCountry();
-        currentToast = StyleableToast.makeText(context, "incorrect", Toast.LENGTH_SHORT, R.style.toast);
+        currentToast = StyleableToast.makeText(context, "Incorrect", Toast.LENGTH_SHORT, R.style.toast);
         currentToast.show();
         return false;
 
@@ -96,6 +96,7 @@ public class GeographyGame {
 
     }
     public double returnScore() {
+        currentToast.cancel();
         return ((score + 0.0)/(countries.size())) * 100;
     }
     public String returnFormattedScore() {
