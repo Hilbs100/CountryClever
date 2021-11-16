@@ -23,7 +23,7 @@
         tools:ignore="onClick" />
 
     <TextView
-        android:id="@+id/saScore"
+        android:id="@+id/geoGameScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saScore">
+        app:layout_constraintTop_toBottomOf="@+id/geoGameScore">
 
         <LinearLayout
             android:layout_width="match_parent"

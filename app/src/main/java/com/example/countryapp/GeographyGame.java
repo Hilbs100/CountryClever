@@ -1,17 +1,24 @@
 package com.example.countryapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 public class GeographyGame {
     private static Context context;
-    private static Toast currentToast;
+    private static StyleableToast currentToast;
     private static ArrayList<GeographyGame> maps = new ArrayList<GeographyGame>();
     private ArrayList<String> countries = new ArrayList<String>();
     private ArrayList<String> usedCountries = new ArrayList<String>();
@@ -46,17 +53,22 @@ public class GeographyGame {
     }
     public static void setToast(Context context) {
         GeographyGame.context = context;
-        currentToast = new Toast(context);
-        currentToast.makeText(context, "", Toast.LENGTH_SHORT);
+        currentToast = StyleableToast.makeText(context, "", Toast.LENGTH_SHORT, R.style.toast);
     }
 
     public String getGoalCountry() {
         return goalCountry;
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @SuppressLint("NewApi")
     public boolean pick(String country) {
         if (country.equals(goalCountry)) {
             Log.i("Geography Game", "true");
-            StyleableToast.makeText(context, "correct", Toast.LENGTH_SHORT, R.style.toast).show();
+            if(currentToast.getRootView().isShown())
+                currentToast.setTooltipText("correct");
+            else {
+                currentToast.makeText(context, "correct", Toast.LENGTH_SHORT, R.style.toast).show();
+            }
             score++;
             findNewCountry();
             return true;
@@ -66,8 +78,11 @@ public class GeographyGame {
         }
         Log.i("Geography Game", "false");
         findNewCountry();
-        StyleableToast.makeText(context, "incorrect", Toast.LENGTH_SHORT, R.style.toast).show();
-        return false;
+        if(currentToast.getRootView().isShown())
+            currentToast.setTooltipText("incorrect");
+        else {
+            currentToast.makeText(context, "incorrect", Toast.LENGTH_SHORT, R.style.toast).show();
+        }        return false;
 
     }
     public void reset() {

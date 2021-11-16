@@ -14,8 +14,8 @@ public class SAresults extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sa_results);
-        TextView results = (TextView) findViewById(R.id.saScore);
+        setContentView(R.layout.geo_game_results);
+        TextView results = (TextView) findViewById(R.id.geoGameScore);
         results.setText("" + southAmerica.returnFormattedScore() + "%");
         if (southAmerica.returnScore() >= 85.0)
             results.setTextColor(Color.GREEN);

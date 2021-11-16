@@ -26,6 +26,7 @@
         android:layout_marginStart="304dp"
         android:layout_marginLeft="304dp"
         android:layout_marginBottom="24dp"
+        android:onClick="goToAfricaResults"
         android:text="Finish"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -47,6 +48,7 @@
         app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.491"
         app:srcCompat="@drawable/doop"
         tools:visibility="visible" />
 

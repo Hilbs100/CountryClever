@@ -35,6 +35,10 @@ public class Africa_Map extends AppCompatActivity {
         Intent intent = new Intent(this, world_Map.class);
         startActivity(intent);
     }
+    public void goToAfricaResults(View v) {
+        Intent intent = new Intent(this, AfricaResults.class);
+        startActivity(intent);
+    }
 
     public void sendROC(View v) {
         africa.pick("DR Congo");
