@@ -59,8 +59,6 @@ public class GeographyGame {
     public String getGoalCountry() {
         return goalCountry;
     }
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    @SuppressLint("NewApi")
     public boolean pick(String country) {
         currentToast.cancel();
         if (country.equals(goalCountry)) {
