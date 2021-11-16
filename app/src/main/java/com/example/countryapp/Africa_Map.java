@@ -204,6 +204,129 @@ public class Africa_Map extends AppCompatActivity {
         }
         Log.i("Geography Game", "Angola picked");
     }
+    public void sendGabon(View v) {
+        africa.pick("Gabon");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Gabon picked");
+    }
+    public void sendCameroon(View v) {
+        africa.pick("Cameroon");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Cameroon picked");
+    }
+    public void sendCAR(View v) {
+        africa.pick("Central African Republic");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Central African Republic picked");
+    }
+    public void sendChad(View v) {
+        africa.pick("Chad");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Chad picked");
+    }
+    public void sendNiger(View v) {
+        africa.pick("Niger");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Niger picked");
+    }
+    public void sendNigeria(View v) {
+        africa.pick("Nigeria");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Nigeria picked");
+    }
+    public void sendGhana(View v) {
+        africa.pick("Ghana");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Ghana picked");
+    }
+    public void sendCoteD(View v) {
+        africa.pick(    "Côte d'Ivoire");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Côte d'Ivoire picked");
+    }
+    public void sendBurkF(View v) {
+        africa.pick("Burkina Faso");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Burkina Faso picked");
+    }
+    public void sendGuinea(View v) {
+        africa.pick("Guinea");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Guinea picked");
+    }
+    public void sendSenegal(View v) {
+        africa.pick("Senegal");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Senegal picked");
+    }
+    public void sendWSahara(View v) {
+        africa.pick("Western Sahara");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Western Sahara picked");
+    }
+    public void sendMorocco(View v) {
+        africa.pick("Morocco");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Morocco picked");
+    }
+    public void sendTunisia(View v) {
+        africa.pick("Tunisia");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Tunisia picked");
+    }
+    public void sendEritrea(View v) {
+        africa.pick("Eritrea");
+        goalCountryText.setText("Find: " + africa.getGoalCountry());
+        if (africa.getGoalCountry().equals("Nothing, you're Finished!")){
+            finish.setVisibility(View.VISIBLE);
+        }
+        Log.i("Geography Game", "Eritrea picked");
+    }
+
+
+
 
 
 
