@@ -62,13 +62,11 @@ public class GeographyGame {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @SuppressLint("NewApi")
     public boolean pick(String country) {
+        currentToast.cancel();
         if (country.equals(goalCountry)) {
             Log.i("Geography Game", "true");
-            if(currentToast.getRootView().isShown())
-                currentToast.setTooltipText("correct");
-            else {
-                currentToast.makeText(context, "correct", Toast.LENGTH_SHORT, R.style.toast).show();
-            }
+            currentToast = StyleableToast.makeText(context, "correct", Toast.LENGTH_SHORT, R.style.toast);
+            currentToast.show();
             score++;
             findNewCountry();
             return true;
@@ -78,11 +76,9 @@ public class GeographyGame {
         }
         Log.i("Geography Game", "false");
         findNewCountry();
-        if(currentToast.getRootView().isShown())
-            currentToast.setTooltipText("incorrect");
-        else {
-            currentToast.makeText(context, "incorrect", Toast.LENGTH_SHORT, R.style.toast).show();
-        }        return false;
+        currentToast = StyleableToast.makeText(context, "incorrect", Toast.LENGTH_SHORT, R.style.toast);
+        currentToast.show();
+        return false;
 
     }
     public void reset() {
