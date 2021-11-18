@@ -33,7 +33,7 @@ public class Asia_Map extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void SAback(View v) {
+    public void asiaBack(View v) {
         asia.reset();
         Intent intent = new Intent(this, world_Map.class);
         startActivity(intent);
