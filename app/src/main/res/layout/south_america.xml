@@ -327,16 +327,16 @@
         app:backgroundTint="#0000FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276"
+        app:layout_constraintVertical_bias="0.28"
         tools:ignore="onClick,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/French"
-        android:layout_width="23dp"
-        android:layout_height="12dp"
+        android:layout_width="22dp"
+        android:layout_height="19dp"
         android:background="#0000FFFF"
         android:onClick="sendSuriname"
         android:text="Button"
@@ -344,10 +344,10 @@
         app:backgroundTint="#0000FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
+        app:layout_constraintVertical_bias="0.3"
         tools:ignore="onClick,TouchTargetSizeCheck" />
 
     <Button
