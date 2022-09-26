@@ -21,6 +21,8 @@
         <activity android:name=".asiaresults"/>
         <activity android:name=".AfricaResults"/>
         <activity android:name=".NAresults"/>
+        <activity android:name=".Europe_Map"/>
+        <activity android:name=".EuropeResults"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

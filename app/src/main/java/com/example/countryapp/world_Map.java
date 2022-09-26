@@ -48,7 +48,8 @@ public class world_Map extends AppCompatActivity {
     }
     @SuppressLint("ResourceType")
     public void goToEurope(View v) {
-        setContentView(R.layout.europe);
+        Intent intent = new Intent(this, Europe_Map.class);
+        startActivity(intent);
     }
     public void goToWorld(View v) {
         Log.i("GeoGame Home", "To World Map");

@@ -330,14 +330,14 @@ public class DoTheStuff {
 
         // Asia
         Country china = new Country(3705000, "Other than India, China has the largest population on Earth!", "China", 1402000000, "Beijing", "Mandarin", "China is one of the largest countries in the world by both land mass and population, and" +
-                "they are one of the oldest civilizations in the world, having been founded nearly 5,000 years ago! National symbols of China include the Giant Panda and the Great Wall of China. The compass was invented in China. China is also home to the world's largest hydroelectric power plant, the Three Gorges Dam, which straddles the Yangtze River.", "Asia");
+                " they are one of the oldest civilizations in the world, having been founded nearly 5,000 years ago! National symbols of China include the Giant Panda and the Great Wall of China. The compass was invented in China. China is also home to the world's largest hydroelectric power plant, the Three Gorges Dam, which straddles the Yangtze River.", "Asia");
 
         // North America
-        Country canada = new Country(3855000, "The longest highway in the world can be found in Canada, with the Trans-Canada Highway spanning 4,860 miles", "Canada", 38010000, "Ottawa", "English", "Canada is the northernmost country in North American and one of the largest countries in the world. Because it" +
+        Country canada = new Country(3855000, "The longest highway in the world can be found in Canada, with the Trans-Canada Highway spanning 4,860 miles", "Canada", 38010000, "Ottawa", "English", "Canada is the northernmost country in North American and one of the largest countries in the world. Because it " +
                 "has been owned by both the French and British in its history, its two main languages are English and French. Canada is the second-largest country by landmass in the world,and only has one land border with another country, the United States of America.", "North America");
 
         // Oceania
-        Country australia = new Country(2970000, "The Great Barrier Reefs, off the coast of Australia, is the largest eco-system in the world!", "Australia", 25690000, "Canberra", "English", "Australia is located in the Southern Hemisphere in the Pacific Ocean. It is known for its beautiful coastline and harsh outback" +
+        Country australia = new Country(2970000, "The Great Barrier Reefs, off the coast of Australia, is the largest eco-system in the world!", "Australia", 25690000, "Canberra", "English", "Australia is located in the Southern Hemisphere in the Pacific Ocean. It is known for its beautiful coastline and harsh outback " +
                 "and attracts a large amount of tourists each year. Iconic symbols of Australia include Kangaroos, Koalas, and Emus", "Oceania");
 
         //Hopefully this fixes things
