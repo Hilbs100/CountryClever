@@ -7,16 +7,434 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="389dp"
-        android:layout_height="574dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="13dp"
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/europegang" />
+        app:srcCompat="@drawable/europe" />
+
+    <TextView
+        android:id="@+id/EuropeText"
+        android:layout_width="194dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/europeBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="europeBack"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/finishEurope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="toEuropeScore"
+        android:text="Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/portugal"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:background="#0000"
+        android:onClick="sendPortugal"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/spain"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:background="#0000"
+        android:onClick="sendSpain"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.883"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/spain2"
+        android:layout_width="29dp"
+        android:layout_height="16dp"
+        android:background="#0000"
+        android:onClick="sendSpain"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/spain3"
+        android:layout_width="29dp"
+        android:layout_height="16dp"
+        android:background="#0000"
+        android:onClick="sendSpain"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/spain4"
+        android:layout_width="29dp"
+        android:layout_height="16dp"
+        android:background="#0000"
+        android:onClick="sendSpain"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/uk"
+        android:layout_width="26dp"
+        android:layout_height="68dp"
+        android:background="#0000"
+        android:onClick="sendUK"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/iceland"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:background="#0000"
+        android:onClick="sendIceland"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/france6"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:background="#0000"
+        android:onClick="sendFrance"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/france2"
+        android:layout_width="26dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendFrance"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/france3"
+        android:layout_width="8dp"
+        android:layout_height="9dp"
+        android:background="#0000"
+        android:onClick="sendFrance"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/france4"
+        android:layout_width="8dp"
+        android:layout_height="9dp"
+        android:background="#0000"
+        android:onClick="sendFrance"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.773"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/france5"
+        android:layout_width="8dp"
+        android:layout_height="9dp"
+        android:background="#0000"
+        android:onClick="sendFrance"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.736"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy2"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.719"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy4"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy5"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy6"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy7"
+        android:layout_width="18dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy8"
+        android:layout_width="10dp"
+        android:layout_height="13dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/switzerland"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:background="#0000"
+        android:onClick="sendSwiss"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/italy3"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:background="#0000"
+        android:onClick="sendItaly"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.735"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/portugal2"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:background="#0000"
+        android:onClick="sendPortugal"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/portugal3"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:background="#0000"
+        android:onClick="sendPortugal"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.857"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/portugal4"
+        android:layout_width="15dp"
+        android:layout_height="7dp"
+        android:background="#0000"
+        android:onClick="sendPortugal"
+        android:text="Button"
+        android:textColor="#0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765"
+        tools:ignore="TouchTargetSizeCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

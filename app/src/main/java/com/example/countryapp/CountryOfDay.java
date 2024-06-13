@@ -2,6 +2,7 @@ package com.example.countryapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.NumberFormat;
 //import the time thingy here
 
 
@@ -20,6 +23,7 @@ public class CountryOfDay extends AppCompatActivity {
     RadioGroup languageMC;
     RadioGroup populationMC;
     RadioGroup landMassMC;
+    RadioGroup continentMC;
     RadioButton radioButton;
     Country cod;
 
@@ -37,11 +41,15 @@ public class CountryOfDay extends AppCompatActivity {
         header.setText("" + headerText);
         Country.getCountryOfTheDay().populate();
 
+
+
         capitalMC = (RadioGroup) findViewById(R.id.Capital);
         languageMC = (RadioGroup) findViewById(R.id.Language);
         landMassMC = (RadioGroup) findViewById(R.id.LandMass);
+        populationMC = (RadioGroup) findViewById(R.id.Population);
+        continentMC = (RadioGroup) findViewById(R.id.Continent);
 
-
+        NumberFormat formatting = NumberFormat.getInstance();
 
         TextView capQues = (TextView) findViewById(R.id.capQues);
         capQues.setText("The capital of " + cod.getCountryName() + " is: ");
@@ -65,60 +73,81 @@ public class CountryOfDay extends AppCompatActivity {
         RadioButton langD = (RadioButton)findViewById(R.id.langD);
         langD.setText("" + cod.getLanguageMC().getChoiceD());
 
+        TextView contQues = (TextView) findViewById(R.id.contQues);
+        contQues.setText("The continent that " + cod.getCountryName() + " is located in is: ");
+        RadioButton contA = (RadioButton)findViewById(R.id.contA);
+        contA.setText("" + cod.getContinentMC().getChoiceA());
+        RadioButton contB = (RadioButton)findViewById(R.id.contB);
+        contB.setText("" + cod.getContinentMC().getChoiceB());
+        RadioButton contC = (RadioButton)findViewById(R.id.contC);
+        contC.setText("" + cod.getContinentMC().getChoiceC());
+        RadioButton contD = (RadioButton)findViewById(R.id.contD);
+        contD.setText("" + cod.getContinentMC().getChoiceD());
+
+
         TextView landQues = (TextView) findViewById(R.id.LMQues);
-        landQues.setText("The population of " + cod.getCountryName() + " is: ");
+        landQues.setText("The land mass of " + cod.getCountryName() + " is: ");
         RadioButton landA = (RadioButton)findViewById(R.id.LMa);
         landA.setText("" + cod.getLandMassMC().getChoiceA() + " square miles");
         RadioButton landB = (RadioButton)findViewById(R.id.LMb);
         landB.setText("" + cod.getLandMassMC().getChoiceB() + " square miles");
         RadioButton landC = (RadioButton)findViewById(R.id.LMc);
-        landC.setText("" + cod.getLandMassMC().getChoiceC() + "square miles");
+        landC.setText("" + cod.getLandMassMC().getChoiceC() + " square miles");
         RadioButton landD = (RadioButton)findViewById(R.id.LMd);
         landD.setText("" + cod.getLandMassMC().getChoiceD() + " square miles");
 
+        TextView popQues = (TextView) findViewById(R.id.popQues);
+        popQues.setText("The population of " + cod.getCountryName() + " is: ");
+        RadioButton popA = (RadioButton)findViewById(R.id.popA);
+        popA.setText("" + (cod.getPopulationMC().getChoiceA()) + " people");
+        RadioButton popB = (RadioButton)findViewById(R.id.popB);
+        popB.setText("" + (cod.getPopulationMC().getChoiceB()) + " people");
+        RadioButton popC = (RadioButton)findViewById(R.id.popC);
+        popC.setText("" + (cod.getPopulationMC().getChoiceC()) + " people");
+        RadioButton popD = (RadioButton)findViewById(R.id.popD);
+        popD.setText("" + (cod.getPopulationMC().getChoiceD()) + " people");
 
 
 
     }
     public void scoreTest(View v) {
+
+        Intent intent = new Intent(this, QuizGrade.class);
         int capitalAnswer = capitalMC.getCheckedRadioButtonId();
         MultipleChoice.reset();
-        Log.i("MC", "" + capitalAnswer);
-        if (capitalAnswer == 2131230828) {
-            Log.i("MC", "Answered A");
-            cod.getCapitalMC().submitAnswer("A");
-        }
-        if (capitalAnswer == 2131230829) {
-            Log.i("MC", "Answered B");
-            cod.getCapitalMC().submitAnswer("B");
-        }
-        if (capitalAnswer == 2131230830) {
-            Log.i("MC", "Answered C");
-            cod.getCapitalMC().submitAnswer("C");
-        }
-        if (capitalAnswer == 2131230831) {
-            Log.i("MC", "Answered D");
-            cod.getCapitalMC().submitAnswer("D");
+        if (capitalAnswer != -1) {
+            Log.i("MC", "" + capitalAnswer);
+            radioButton = findViewById(capitalAnswer);
+            cod.getCapitalMC().submitAnswer("" + radioButton.getText());
         }
 
         int languageAnswer = languageMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + languageAnswer);
-        if (languageAnswer == 2131230728) {
-            Log.i("MC", "Answered A");
-            cod.getLanguageMC().submitAnswer("A");
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + languageAnswer);
+            radioButton = findViewById(languageAnswer);
+            cod.getLanguageMC().submitAnswer("" + radioButton.getText());
         }
-        if (languageAnswer == 2131230729) {
-            Log.i("MC", "Answered B");
-            cod.getLanguageMC().submitAnswer("B");
+
+        int continentAnswer = continentMC.getCheckedRadioButtonId();
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + continentAnswer);
+            radioButton = findViewById(continentAnswer);
+            cod.getContinentMC().submitAnswer("" + radioButton.getText());
         }
-        if (languageAnswer == 2131230730) {
-            Log.i("MC", "Answered C");
-            cod.getLanguageMC().submitAnswer("C");
+
+        int landMassAnswer = landMassMC.getCheckedRadioButtonId();
+        if (landMassAnswer != -1) {
+            Log.i("MC", "" + landMassAnswer);
+            radioButton = findViewById(landMassAnswer);
+            cod.getLandMassMC().submitAnswer("" + radioButton.getText());
         }
-        if (languageAnswer == 2131230731) {
-            Log.i("MC", "Answered D");
-            cod.getLanguageMC().submitAnswer("D");
+        int populationAnswer = populationMC.getCheckedRadioButtonId();
+        if (populationAnswer != -1) {
+            Log.i("MC", "" + populationAnswer);
+            radioButton = findViewById(populationAnswer);
+            cod.getPopulationMC().submitAnswer("" + radioButton.getText());
         }
+        startActivity(intent);
 
 
     }
@@ -127,20 +156,39 @@ public class CountryOfDay extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         int capitalAnswer = capitalMC.getCheckedRadioButtonId();
         MultipleChoice.reset();
-        Log.i("MC", "" + capitalAnswer);
-        radioButton = findViewById(capitalAnswer);
-        cod.getCapitalMC().submitAnswer("" + radioButton.getText());
+        if (capitalAnswer != -1) {
+            Log.i("MC", "" + capitalAnswer);
+            radioButton = findViewById(capitalAnswer);
+            cod.getCapitalMC().submitAnswer("" + radioButton.getText());
+        }
 
         int languageAnswer = languageMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + languageAnswer);
-        radioButton = findViewById(languageAnswer);
-        cod.getLanguageMC().submitAnswer("" + radioButton.getText());
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + languageAnswer);
+            radioButton = findViewById(languageAnswer);
+            cod.getLanguageMC().submitAnswer("" + radioButton.getText());
+        }
+
+        int continentAnswer = continentMC.getCheckedRadioButtonId();
+        if (languageAnswer != -1) {
+            Log.i("MC", "" + continentAnswer);
+            radioButton = findViewById(continentAnswer);
+            cod.getContinentMC().submitAnswer("" + radioButton.getText());
+        }
+
 
         int landMassAnswer = landMassMC.getCheckedRadioButtonId();
-        Log.i("MC", "" + landMassAnswer);
-        radioButton = findViewById(landMassAnswer);
-        cod.getLandMassMC().submitAnswer("" + radioButton.getText());
-
+        if (landMassAnswer != -1) {
+            Log.i("MC", "" + landMassAnswer);
+            radioButton = findViewById(landMassAnswer);
+            cod.getLandMassMC().submitAnswer("" + radioButton.getText());
+        }
+        int populationAnswer = populationMC.getCheckedRadioButtonId();
+        if (populationAnswer != -1) {
+            Log.i("MC", "" + populationAnswer);
+            radioButton = findViewById(populationAnswer);
+            cod.getPopulationMC().submitAnswer("" + radioButton.getText());
+        }
         MultipleChoice.score();
 
         startActivity(intent);

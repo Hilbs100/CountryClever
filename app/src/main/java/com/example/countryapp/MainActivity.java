@@ -38,25 +38,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        Button begin = (Button) findViewById(R.id.beginButton);
-        begin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.activity_world__map);
-                Log.i("Starter", "clicked");
-            }
-        });
     }
     public void openCOD(View v) {
         Intent intent = new Intent(this, CountryOfDay.class);
         repeat = 1;
-        int year = new Date().getYear() + 1900;
+        int year = new Date().getYear();
         int month = new Date().getMonth() + 1;
         int day = new Date().getDate();
         Country.setDate(year, month, day);
         Country.setCountryOfTheDay();
         Log.i("COD", "Date: " + month + "/" + day + "/" + year);
         startActivity(intent);
+    }
+
+    public void toGeoGame(View v) {
+        Intent intent = new Intent(this, world_Map.class);
+        startActivity(intent);
+        Log.i("Starter", "clicked");
     }
 
 
@@ -106,40 +104,11 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Canada", "Clicked");
     }
     public void returnHome(View v) {
-        setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 
-
-
-    @SuppressLint("ResourceType")
-    public void goToNA(View v) {
-        setContentView(R.layout.north_america);
-    }
-    @SuppressLint("ResourceType")
-    public void goToSA(View v) {
-        setContentView(R.layout.south_america);
-    }
-    @SuppressLint("ResourceType")
-    public void goToOceania(View v) {
-        setContentView(R.layout.oceania);
-    }
-    @SuppressLint("ResourceType")
-    public void goToAsia(View v) {
-        setContentView(R.layout.asia);
-    }
-    @SuppressLint("ResourceType")
-    public void goToAfrica(View v) {
-        setContentView(R.layout.africa);
-    }
-    @SuppressLint("ResourceType")
-    public void goToEurope(View v) {
-        setContentView(R.layout.europe);
-    }
-    public void goToWorld(View v) {
-        Log.i("GeoGame Home", "To World Map");
-        setContentView(R.layout.world_map_game);
-    }
 
 
 }

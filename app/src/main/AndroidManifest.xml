@@ -12,6 +12,17 @@
         <activity android:name=".search_globe"></activity>
         <activity android:name=".world_Map" />
         <activity android:name=".CountryOfDay"/>
+        <activity android:name=".QuizGrade"/>
+        <activity android:name=".Africa_Map"/>
+        <activity android:name=".SouthAmerica_Map"/>
+        <activity android:name=".SAresults"/>
+        <activity android:name=".NA_Map"/>
+        <activity android:name=".Asia_Map"/>
+        <activity android:name=".asiaresults"/>
+        <activity android:name=".AfricaResults"/>
+        <activity android:name=".NAresults"/>
+        <activity android:name=".Europe_Map"/>
+        <activity android:name=".EuropeResults"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

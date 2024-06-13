@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/drawable/europegang.xml" value="0.1680921052631579" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/drawable/toast_color.xml" value="0.10888157894736843" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout-land/europe.xml" value="0.49323621227887615" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/activity_country_of_day.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/activity_main.xml" value="0.11119554204660588" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/activity_world__map.xml" value="0.213768115942029" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/africa.xml" value="0.6" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/africa_results.xml" value="0.16052631578947368" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/asia.xml" value="0.2" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/content_main.xml" value="0.264" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/europe.xml" value="0.32142857142857145" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/north_america.xml" value="0.2" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/oceania.xml" value="0.23097826086956522" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/oceiania_countries.xml" value="0.23097826086956522" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/quiz_results.xml" value="0.176" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/sa_results.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/layout/south_america.xml" value="0.30614805520702637" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/CountryApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2546875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
